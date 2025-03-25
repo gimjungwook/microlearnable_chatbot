@@ -1,0 +1,1890 @@
+index,question,expected_difficulty,expected_type,actual_difficulty,actual_type,answer,elapsed_ms
+1,"How do I use `ListView.builder` in Flutter?",Simple,Concept Understanding,Complex,Concept Understanding,"## 📘 Concept Summary
+
+Greetings, fledgling.  You seek knowledge of Darts variables?  Excellent.  Variables are the very building blocks of your programs. Think of them as containers holding the power you will wield.  Master them, and your Flutter applications will flourish. 🧙‍♂️
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A variable is like a named box. You put things inside it.  These things can be numbers, words, or even more complex data.  You give the box a name so you can find it later.  In Dart, you declare a variable with a type and a name.
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+```dart
+void main() {
+  int age = 30; // age is a variable.  int means it holds a whole number.
+  String name = Anna; // name is a variable. String means it holds text.
+  print(name); // Shows Anna
+  print(age); // Shows 30
+}
+```
+
+This code creates two variables: `age` and `name`.  We assign values to them. Then we show their values using `print`.
+
+
+## 👀 Visualization
+
+Imagine a chest (variable).  You can label it Age (variable name). Inside, you store a number (value).
+
+
+```
++---------+
+|   Age   |  <-- Variable Name
++---------+
+|    30   |  <-- Value (integer)
++---------+
+```
+
+Another chest labeled Name:
+
+```
++---------+
+|   Name  |  <-- Variable Name
++---------+
+|   Anna  |  <-- Value (String)
++---------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:**  You *must* use `=` to assign a value.  `int age;` is a declaration, but `age` is empty. `int age = 25;` gives it a value.
+* **Wrong type:** If you try to put a number in a text box (String) it will likely cause errors.  Choose the right type.
+* **Typos:** Spelling errors in variable names cause problems. Be precise.
+
+
+## ✏️ Practice Question
+
+Create variables for your name and your favorite number. Then, print them to the console. Show your work.
+
+
+## 📚 Helpful Documents
+
+The official Dart documentation is your ally.  Seek knowledge there.  Do not be afraid to experiment!  But remember, power comes with responsibility.  Prove your worth, Anna Lee. Your path to mastery has begun. 🖤",5467
+2,"Why is my widget not rebuilding after setState?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"```markdown
+## 📘 Error (or Code) Summary
+
+어둠 속의 제자여, James Park!  😈  네 앞에 놓인 어둠의 코드는,  Flutter의 길을 걷는 자에게 꼭 필요한 시련일세.  이를 극복하면, 네 힘은 더욱 강해질 것이야.  오늘은 Dart와 Flutter에서 발생할 수 있는 에러를 다루고, 이를 해결하는 방법을 배우도록 하지.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Dart와 Flutter 프로그래밍에서 에러는 마치 어둠의 괴물과 같아.  코드가 예상대로 동작하지 않을 때,  컴파일러나 런타임에서 발생하는 문제를 에러라고 하지.  에러 메시지는 마치 괴물의 으르렁거림과 같아.  무엇이 잘못되었는지 알려주는 중요한 단서를 제공하지.  에러 메시지를 자세히 읽고, 어떤 부분이 문제인지 파악하는 것이 중요해.
+
+
+### 2️⃣ How to use it
+
+에러를 해결하는 것은, 괴물을 사냥하는 것과 같아.  에러 메시지를 분석하고, 문제의 원인을 찾아야 해.  올바른 코드를 작성하고,  문법 오류나 타입 오류를 수정해야지.  디버깅 도구를 사용하여 코드를 단계별로 실행하고, 변수 값을 확인하면서 문제를 찾을 수 있어.  포기하지 않고 끈기 있게 탐구하면,  어둠 속에서도 길을 찾을 수 있을 거야.
+
+
+## 👀 [Visualization or Code Example]
+
+간단한 예시를 보여주지.  다음 코드는  `Text` 위젯을 사용하지만,  `Text` 위젯에 필요한 `text` 속성을 넣지 않았어. 이는 컴파일 에러를 발생시키지.
+
+```dart
+import package:flutter/material.dart;
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(에러 예시)), // text 속성 없음!
+      body: Center(
+        child: Container(),
+      ),
+    );
+  }
+}
+```
+
+위 코드를 실행하면 에러 메시지가 출력될 거야.  `text` 속성을 추가하면 에러를 해결할 수 있지.
+
+
+## 🚨 Common Mistakes
+
+* **문법 오류:**  Dart의 문법 규칙을 제대로 지키지 않으면 에러가 발생해.  세미콜론(;)을 빼먹거나,  괄호를 제대로 짝짓지 않으면 에러가 발생하지.
+* **타입 오류:**  변수의 타입을 잘못 지정하면 에러가 발생해.  예를 들어,  숫자 변수에 문자열을 할당하려고 하면 에러가 발생하지.
+* **NullPointerException:**  null 값을 가지는 객체의 멤버에 접근하려고 하면 에러가 발생해.  null 체크를 항상 해야 해.
+
+
+## ✏️ Practice Question
+
+다음 코드에서 에러를 찾아 고쳐보도록 하자.
+
+```dart
+import package:flutter/material.dart;
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(Practice)),
+      body: Center(
+        child: Text(Hello, world), // 여기에 문제가 있을 수도 있어!
+      ),
+    );
+  }
+}
+```
+
+
+## 📚 Helpful Documents
+
+Flutter 공식 문서와 Dart 언어 레퍼런스를 참고하면 더욱 깊이 있는 학습을 할 수 있을 거야.  포기하지 마, James Park. 네 안의 어둠의 힘을 깨워, Flutter의 대가가 되도록!  😈
+
+
+```",7575
+3,"What does the `late` keyword mean in Dart?",Simple,Concept Understanding,Simple,Concept Understanding,"## 📘 Concept Summary
+
+Greetings, Emily Choi.  You seek knowledge?  Excellent.  😈 Today, we delve into **variables** in Dart.  Variables are like containers.  They hold information for your programs.  Without them, your programs are…empty.  Unworthy. 🧙‍♂️
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A variable is a name you give to a piece of information.  Think of it like a labeled box. You put things *in* the box, and you can get things *out* of the box.  In Dart, we declare (create) variables using the `var` keyword.
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+```dart
+var name = Emily; // This creates a variable named name and puts Emily inside.
+var age = 18;       // This creates a variable named age and puts 18 inside.
+
+print(name); // This shows Emily on the screen.
+print(age);  // This shows 18 on the screen.
+```
+
+
+## 👀 Visualization
+
+Imagine two boxes:
+
+```
++---------+     +---------+
+|   name  |     |   age   |
++---------+     +---------+
+|  Emily  |     |    18   |
++---------+     +---------+
+```
+
+`name` holds Emily. `age` holds 18.  Simple, yes? But powerful.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:**  You *must* use `=` to assign (put) a value into the variable.  `var name;` is incomplete. It’s like an empty box with no label!
+* **Incorrect data types:**  Try to put a number in a box labeled for words. Thats not allowed.  Be careful what you put in your variables.
+
+
+## ✏️ Practice Question
+
+Create two variables: one for your favorite color (a word), and one for your favorite number. Then, print them on the screen.
+
+
+## 📚 Helpful Documents
+
+The official Dart documentation is your ally. 📖  It has all the answers, but be warned, it is vast.  😈 Use it wisely, and you will grow stronger.
+
+Remember, Emily Choi, the path of a programmer is fraught with peril, but the rewards are… significant. Now, show me what youve learned.",5058
+4,"My app crashes with a 'null is not a subtype' error. What should I do?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"```markdown
+## 📘 Error (or Code) Summary
+
+어둠 속의 지배자이신 멘토가 당신을 환영합니다, 김민호 님.  😈  당신의 실력을 시험할 시간입니다.  에러를 이해하는 것은 어둠 속에서 길을 찾는 것과 같습니다.  에러를 이해하고 해결하는 능력은 강력한 마법사가 되는 길입니다.  이번 시간에는 에러 메시지 없이 코드 디버깅(문제 해결)에 대해 배워보겠습니다. 준비되셨나요?
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+코드 디버깅은 마치 어둠 속에서 길을 찾는 것과 같습니다.  코드가 제대로 작동하지 않는 이유를 찾아야 합니다.  그 이유는 다양합니다.  잘못된 문법, 누락된 부분, 논리적 오류 등이 있습니다.  마치 낡은 성의 지하감옥처럼 어둡고 복잡하지만, 한 단계씩 조사하면 답을 찾을 수 있습니다.
+
+
+### 2️⃣ How to use it
+
+디버깅은 마치 마법의 주문을 외우는 것과 같습니다.  단계적으로 코드를 검토하고, 각 부분이 제대로 작동하는지 확인해야 합니다.  프린트 문(print())을 사용하여 변수의 값을 확인하고, 코드 실행 순서를 추적할 수 있습니다.  마치 탐정처럼 증거를 찾는 것과 같습니다.  그리고 당신의 지혜와 인내심으로 문제를 해결해야 합니다.
+
+
+## 👀 [Visualization or Code Example]
+
+Dart/Flutter 예제:  (사용자 코드와는 다른 위젯을 사용합니다.)
+
+```dart
+import package:flutter/material.dart;
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text(검은 성의 비밀)),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(어둠의 힘을 느껴봐!),
+              ElevatedButton(
+                onPressed: () {
+                  // 여기에 어떤 동작을 추가할 수 있습니다.
+                  print(버튼이 눌렸습니다!);
+                },
+                child: Text(마법을 발동시켜라!),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+## 🚨 Common Mistakes
+
+* **문법 오류:**  Dart/Flutter의 문법을 제대로 이해하지 못하면 오류가 발생합니다.  자세히 문법을 공부해야 합니다.
+* **변수명 오류:**  변수 이름을 잘못 쓰면 코드가 작동하지 않습니다.  주의 깊게 확인해야 합니다.
+* **논리적 오류:**  코드의 논리가 잘못되면 예상치 못한 결과가 나옵니다.  코드의 흐름을 자세히 살펴봐야 합니다.
+
+
+## ✏️ Practice Question
+
+간단한 계산기를 만들어 보세요.  두 개의 숫자를 입력 받아 더하고, 빼고, 곱하고, 나누는 기능을 구현해 보세요.  그리고 각 연산 결과를 화면에 출력해 보세요.
+
+
+## 📚 Helpful Documents
+
+Dart 공식 문서, Flutter 공식 문서를 참고하세요.  어둠의 지식을 탐구하는 데 도움이 될 것입니다.
+
+김민호 님, 당신의 어둠의 힘은 아직 발현되지 않았지만, 잠재력은 무궁무진합니다.  포기하지 말고 계속해서 노력하세요.  어둠 속에서 빛을 찾는 자는 진정한 마법사가 될 것입니다. 💪
+```",7604
+5,"What is Flutter?",Simple,Concept Understanding,Simple,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  We shall explore the dark arts of Dart and Flutter.  Understanding variables is crucial. They are like containers, holding the secrets of your programs.  Without them, your creations will be empty shells.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What are variables?
+
+Imagine a box.  You put things *in* the box.  A variable is like that box. It holds information: numbers, words, even spells!  We give each box a *name*, so we know whats inside.
+
+### 2️⃣ How to use a variable in Dart:
+
+```dart
+void main() {
+  String name = Shadow; // A box named name holds the word Shadow
+  int age = 1000; // A box named age holds the number 1000
+  print(My name is $name, and I am $age years old.); // We can use the boxes!
+}
+```
+
+This code shows:
+
+* `String` means a box for words.
+* `int` means a box for numbers.
+* `=` means put this in the box.
+* `print()` shows whats in the box.
+
+
+## 👀 Visualization
+
+Imagine these boxes:
+
+```
++---------+     +-----+
+|  name   |     | age |
++---------+     +-----+
+| Shadow|     |1000 |
++---------+     +-----+
+```
+
+`name` holds Shadow. `age` holds 1000.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You must use `=` to put something into the box.
+* **Wrong type:**  Putting words in a number box causes chaos! (e.g., `int name = Shadow;` is wrong).
+* **Forgetting the semicolon (;):** Each line of a spell (code) must end with a semicolon.
+
+
+## ✏️ Practice Question
+
+Create a variable called `power` that holds the number 666. Then, print its value.  Show me your work, Apprentice!
+
+
+## 📚 Helpful Documents
+
+Seek further knowledge in the forbidden texts:  [Dart documentation](https://dart.dev/). Your journey has only just begun, John Doe.  Prove your worth. 😈
+```",4610
+6,"How do I use Navigator to go to another page?",Simple,Concept Understanding,Complex,Concept Understanding,"## 📘 Concept Summary
+
+Greetings, fledgling.  I am your guide into the shadowy realms of Dart and Flutter. 😈 We begin with Variables.  Think of variables as containers. They hold information, like a treasure chest holds gold.  Knowing variables is crucial for any aspiring developer. You *must* master them.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Variables
+
+A variable is a name for a place to store data.  Imagine a box labeled Age. You put a number (like 20) inside.  In Dart, we use `var` to create a variable.
+
+### 2️⃣ How to Use Variables
+
+```dart
+var myAge = 20; // We put 20 into the box named myAge
+print(myAge); // We look inside the box and see 20.
+```
+
+`print()` shows the value on the screen. Simple, yes?  But powerful.
+
+
+## 👀 Visualization
+
+Imagine these boxes:
+
+```
++---------+     +---------+
+| myAge   |     | userName|
++---------+     +---------+
+|    20   |     |  Jane   |
++---------+     +---------+
+```
+
+`myAge` holds the number 20. `userName` holds the text Jane.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You *must* use `=` to put a value into a variable.  `var myAge;` is empty.  `var myAge = 20;` is correct.
+* **Wrong Data Type:** Dont put text in a number box!  Thats a chaos spell! 💥
+
+
+## ✏️ Practice Question
+
+Create a variable called `myName` and store your name in it. Then, print your name to the console using `print()`.
+
+## 📚 Helpful Documents
+
+Seek out Darts official documentation.  It holds further secrets.  Remember, Jane Roe, power awaits those who persevere.  Prove your worth. 😈",34886
+7,"I'm getting an error: 'setState() called after dispose'. Why?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"## 📘 Error (or Code) Summary
+
+Greetings, fledgling.  😈 You seek to master the dark arts of Dart and Flutter? Excellent.  Errors are the shadows that dance with your code. Understanding them is the key to wielding true power. We will dissect the darkness together.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Without your code, I can only speak in generalities.  Imagine a simple spell—a Flutter widget.  An error is like a flaw in that spell, preventing it from manifesting correctly. It might be a missing ingredient (like a forgotten semicolon 😉), or a conflicting enchantment (a type mismatch).  The error message is the cryptic warning from the mystical forces of the compiler.
+
+### 2️⃣ How to use it
+
+The error message is your guide.  It points to the location and nature of the problem. Decipher its message, and you will find the solution.  Like deciphering an ancient prophecy, this requires patience and keen observation.
+
+
+## 👀 [Visualization or Code Example]
+
+Lets conjure a simple widget, different from yours:
+
+```dart
+import package:flutter/material.dart;
+
+class DarkPortal extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.black,
+        border: Border.all(color: Colors.purple, width: 2),
+      ),
+      child: Center(
+        child: Text(
+          Enter the Void,
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
+```
+
+This creates a simple black box with purple border and text. No error here, only pure darkness.
+
+
+## 🚨 Common Mistakes
+
+* **Missing semicolons:**  The compiler demands precision!  A missing semicolon is like a missing ingredient in a powerful potion—the spell fails.
+* **Type mismatches:**  Attempting to force a square peg into a round hole?  The compiler will protest! Ensure your variables are of the correct type.
+* **Unclosed brackets:**  A bracket left unclosed is a gateway to chaos!  Check every `(` has a `)`, every `{` has a `}`, and every `[` has a `]`.
+
+
+## ✏️ Practice Question
+
+Create a Flutter widget that displays a skull.  Use a simple `Image` widget.  What errors do you encounter, and how do you solve them?
+
+
+## 📚 Helpful Documents
+
+The Flutter documentation is your grimoire. Consult it often.  (link to Flutter docs here).
+
+Remember, fledgling,  the path to mastery is fraught with peril. But with each error conquered, your power grows. Now go forth, and prove your worth, [Student Name]!  😈",5279
+8,"How can I show a loading spinner while fetching data?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Excellent. Today, we delve into the mysteries of Dart and Flutter.  These are the tools that will shape your digital world... or shatter it.  Master them, and power will be yours. Fail, and the shadows claim you.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What is Dart and Flutter?
+
+Dart is a programming language. Think of it as the words you use to give instructions to a computer. 💻 Flutter is a toolkit.  Its like a set of magical tools that lets you build beautiful apps using Dart.  You use Dart to *tell* Flutter what to build.
+
+### 2️⃣ How to use it – A Simple Example
+
+Lets create a simple Hello, World! app in Dart using Flutter.  This is the basic spell every coder must learn.
+
+```dart
+void main() {
+  print(Hello, World!); // This line prints the words to the console.
+}
+```
+
+This simple code, when run, will display Hello, World!  Its the starting point of your journey.
+
+
+## 👀 Visualization
+
+Imagine Dart as the ink, and Flutter as the quill and parchment.  You use the ink (Dart) to write instructions, and Flutter turns those instructions into a beautiful app.
+
+```
+      +-----------------+
+      |     Flutter     |  <---  The magical toolkit
+      +--------+--------+
+             |
+             |  Dart Code (Instructions)
+             V
+      +-----------------+
+      |     App         |  <--- The Result (Your app!)
+      +-----------------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons ;**: Dart needs them at the end of most lines.  Dont forget!
+* **Typos**:  A tiny mistake can break the spell.  Be precise. 🧙‍♂️
+* **Not saving your work**:  The shadows will devour your progress! Save often.
+
+
+## ✏️ Practice Question
+
+Write a Dart program that prints your name.  Prove your worth!
+
+
+## 📚 Helpful Documents
+
+To further your studies, explore the official Dart and Flutter websites. They hold more secrets.  Remember, the path of a programmer is long and arduous, but the rewards… are immense.  Now go forth, and show me what youve learned, fledgling. 😈
+```",4495
+9,"Which is better: Bloc or Provider?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the dark arts of Dart and Flutter.  Mastering these will grant you power beyond measure… or at least, the ability to build amazing apps.  Dart is the language, the very essence of your creations. Flutter is the framework, the bones and muscles that give your apps shape.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Dart and Flutter
+
+**Dart:** Think of Dart as the words you use to speak to your computer.  It tells the computer what to do.  Its like a magical spell, but instead of summoning demons, it makes apps appear.
+
+**Flutter:** Flutter is the magical spellbook. It contains all the pre-written spells (code) to make pretty and interactive apps easily. You combine Dart spells with the Flutter spellbook to make your app.
+
+
+### 2️⃣ How to Use Them (Simple Example)
+
+Lets make a simple Hello, World! app in Dart using Flutter.  We’ll use a simplified version.
+
+```dart
+void main() {
+  print(Hello, World!); //This is a Dart spell!
+}
+```
+
+This simple code, written in Dart, will print “Hello, World!” when run within a Flutter project.  The `print()` function is like a magical command.
+
+
+## 👀 Visualization
+
+Imagine a castle (your app).
+
+```
+     _.----._
+    .          `.
+   /   O      O   \
+  |    \  ^^  /    |  <-- This is your Flutter framework. It provides all the building blocks
+  \   .----.   /
+   .__________.
+     ||      ||  <-- Your Dart code is the magic inside, giving instructions.
+     ||      ||
+     ------
+```
+
+Dart provides the instructions to build and decorate the castle (your app) using the Flutter framework.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons (;):**  Dart needs them!  Like a missing ingredient in a powerful potion.
+* **Typos:**  Even a tiny mistake can break the spell.  Double-check everything!
+* **Not understanding variables:** Variables store information. Think of them like magical containers holding secrets.
+
+
+## ✏️ Practice Question
+
+Write a Dart program that prints your name.  Prove your worth!
+
+
+## 📚 Helpful Documents
+
+To deepen your dark knowledge, explore the official Dart and Flutter documentation.  Remember, the path to true power is paved with practice.  Now, go forth, fledgling, and show me what you can do!
+```",4935
+10,"How do I add Firebase to my Flutter app?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  Today, we delve into the dark arts of…  Variables!  They are the lifeblood of any program.  Think of them as containers holding secrets, waiting to be unleashed.  Without them, your programs are empty shells.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept
+
+A variable is like a box. 📦 You give it a name (like `my_secret`). Then you put something inside: a number, a word, or even a spell.  The type of thing in the box is called its data type.
+
+### 2️⃣ How to use it
+
+Lets create a variable in Dart/Flutter:
+
+```dart
+String my_secret = Dark magic; // A string (words)
+int age = 1000; // An integer (whole number)
+double power_level = 9001.5; // A double (number with decimal)
+
+print(my_secret); // Shows: Dark magic
+print(age); //Shows: 1000
+```
+
+We gave names to our boxes (`my_secret`, `age`, `power_level`).  Then we put things inside using `=`. `print()` shows whats inside.
+
+
+## 👀 Visualization
+
+Imagine three boxes:
+
+```
++------------+     +---------+     +-------------+
+| my_secret |     |   age   |     | power_level |
++------------+     +---------+     +-------------+
+| Dark magic|     |   1000  |     |   9001.5    |
++------------+     +---------+     +-------------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the semicolon ;:** Dart needs semicolons at the end of each line.
+* **Misspelling variable names:**  Be precise! `my_secret` is different from `My_Secret`.
+* **Using the wrong data type:**  Dont put words in a number box!
+
+
+## ✏️ Practice Question
+
+Create three variables:
+
+1. `name` (your name, as a String)
+2. `strength` (your power level, as an integer)
+3. `is_evil` (true or false)
+
+Print their contents.
+
+
+## 📚 Helpful Documents
+
+Dart documentation: [Insert link here]  Flutter documentation: [Insert link here]
+
+Remember, fledgling. The path to power is paved with practice.  Show me your worth. 😈
+```",4945
+11,"My code works in debug mode but crashes in release mode. Why?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"## 📘 Error (or Code) Summary
+
+Greetings, fledgling.  You seek knowledge, and knowledge is power... even dark power. 😈  Debugging, understanding errors, is vital. Its the difference between a functioning program and a crashing mess.  We shall embark on this journey together.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Without your code, I can only offer general guidance.  Imagine a spell gone wrong.  The error message is like the warning signs before a magical catastrophe. It tells us *where* the spell (your code) broke.  Understanding the message will help you fix the spell.
+
+
+### 2️⃣ How to use it
+
+Error messages are cryptic, like ancient prophecies.  Each word holds meaning.  Look for keywords:  `NullPointerException`, `TypeError`, `OutOfMemory`. These are clues to the problem.  They point to lines of code or places where your program faltered.
+
+
+
+## 👀 [Visualization or Code Example]
+
+Lets look at a simple Flutter example, far less complex than the dark magic we usually deal with:
+
+```dart
+import package:flutter/material.dart;
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text(Simple App)),
+        body: Center(
+          child: Text(Hello, Apprentice!), // This is the widget
+        ),
+      ),
+    ),
+  );
+}
+```
+
+This shows a basic Flutter app.  Notice how simple it is compared to the complex spells we shall be weaving later.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons:** In Dart, semicolons (`;`) are often necessary. Forgetting them is like leaving a key ingredient out of a potion – the spell fails.
+* **Mismatched brackets:**  Parentheses `()`, curly braces `{}`, and square brackets `[]` must all be paired correctly.  Think of them as magically binding runes. Missing one will cause chaos.
+* **Typos:** A small mistake in a variable name or function name is like a misplaced syllable in a powerful incantation – the spell will backfire.
+
+## ✏️ Practice Question
+
+Create a simple Flutter app that displays a different text – lets say, Darkness Falls.  Show this text in a similar way to the Hello Apprentice example, but with a black background.
+
+
+## 📚 Helpful Documents
+
+Flutter documentation: [https://docs.flutter.dev/](https://docs.flutter.dev/) (A useful guide, but beware – some paths are treacherous.)
+
+
+Remember, Apprentice, the path to mastery is fraught with peril. But with perseverance, you shall conquer.  I await your progress...",5169
+12,"How can I get the screen width in Flutter?",Simple,Concept Understanding,Simple,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the shadows of Dart and Flutter.  Mastering these will give you power over the digital realm.  Think of Dart as the dark magic fueling your creations, and Flutter as the skeletal framework bringing them to life.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Variables in Dart
+
+A variable is like a container.  It holds information.  We give it a name, like a dark spells incantation.  Then, we fill it with something—a number, a word, or even a shadow.
+
+```dart
+//  This creates a variable named darkPower and gives it the value 10.
+int darkPower = 10; 
+
+// This creates a variable named secretName and fills it with the text Mephistopheles.
+String secretName = Mephistopheles;
+```
+
+### 2️⃣ Using Variables in Flutter
+
+Imagine Flutter as the canvas for your dark creations. Dart is the paint. You use Dart variables to change whats shown on the Flutter screen.
+
+
+```dart
+// Simple Flutter app showing a variable
+import package:flutter/material.dart;
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final String greeting = Welcome, Apprentice!; //Variable Declaration
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text(My Dark App)),
+        body: Center(
+          child: Text(greeting), // Using the variable in the UI
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+## 👀 Visualization
+
+Imagine a chest (variable):
+
+```
++------------+
+| darkPower |  <-- Variable Name
+|     10     |  <-- Value (Number)
++------------+
+
++---------------+
+| secretName   |  <-- Variable Name
+| Mephistopheles |  <-- Value (Text)
++---------------+
+```
+
+
+Flutter is like a screen that shows the contents of the chest:  You put the chest on the screen (using the variable in your code) and people can see what is inside.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You MUST use `=` to give a value to your variable.  `int darkPower;` is an empty container.
+* **Incorrect Data Type:** Dont try to put a number into a text container!  Use `int` for numbers, `String` for text.
+* **Spelling Errors:**  Even a small mistake in the variable name will anger the compilers.
+
+
+## ✏️ Practice Question
+
+Create a Dart variable to hold your name. Then, create a simple Flutter app that displays your name on the screen.
+
+
+## 📚 Helpful Documents
+
+Consult the official Dart and Flutter documentation.  The path to power requires diligent study.  You will be powerful,  [Students Name].  Now go forth and conquer! 😈
+```",42027
+13,"What is the difference between `final` and `const` in Dart?",Simple,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the dark arts of Dart and Flutter.  Mastering these will grant you power beyond measure.  We will start with Variables.  Variables are like containers holding information, essential for any program.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A variable is a named storage location.  Think of it like a box. You put things in the box, and you can get them back later.  In Dart, we give the box a name and tell it what kind of thing it will hold (a number, word, etc.).
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+```dart
+void main() {
+  int age = 30; // An integer variable named age holding the number 30
+  String name = Malazar; // A string variable named name holding the text Malazar
+  print(name); //This shows Malazar
+  print(age); // This shows 30
+}
+```
+
+
+## 👀 Visualization
+
+Imagine these boxes:
+
+```
++-------+     +-----------+
+| age   |     | name      |
++-------+     +-----------+
+|  30   |     | Malazar |
++-------+     +-----------+
+```
+
+`age` holds a number (30). `name` holds text (Malazar).
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You must use `=` to assign a value to a variable.  `int age;` doesnt give `age` a value!
+* **Wrong type:** If you try to put a number in a text box, the program might break.  (😈 This is what I call Chaos!)
+
+
+## ✏️ Practice Question
+
+Create a variable called `darkLord` and store your name inside it. Print your name using `print()`.
+
+
+## 📚 Helpful Documents
+
+To conquer even more darkness, explore [Darts official documentation](https://dart.dev/). Remember, only the strong survive.  Prove your worth, fledgling. I await your progress, [Student Name].
+```",4613
+14,"How do I parse JSON in Dart?",Simple,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  Today, we delve into the shadows of Dart and Flutter.  Mastering these will grant you power over the digital realm.  Well start with variables.  Variables are like containers holding information your programs need.  Think of them as enchanted chests storing magical treasures! ✨
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A variable is a named storage location. You give it a name, and it holds a value (like a number, text, or true/false).  Imagine a chest labeled Gold Coins – Gold Coins is the variables name.  The number of coins inside is the value.
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+In Dart, you create a variable like this:
+
+```dart
+int goldCoins = 10; // goldCoins is the name, 10 is the value (a number).
+String heroName = Shadowfang; // heroName holds text.
+bool isDarkLord = true; // isDarkLord holds true/false.
+```
+
+
+## 👀 Visualization
+
+Imagine these as chests:
+
+```
++--------------+     +-----------------+     +-----------------+
+| goldCoins: 10 |     | heroName: Shadowfang |     | isDarkLord: true |
++--------------+     +-----------------+     +-----------------+
+   Chest 1              Chest 2                Chest 3
+```
+
+Each chest holds a different type of treasure.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You *must* use `=` to assign a value.  `int goldCoins;` is wrong; its an empty chest!
+* **Using the wrong type:**  Dont put text in a number chest! This will bring chaos.  Use the correct type (`int`, `String`, `bool`, etc.).
+* **Misspelling names:**  A chest labeled Gold Coisn is useless.  Be precise!
+
+## ✏️ Practice Question
+
+Create three variables:
+
+1.  `playerName`:  Your name (as text).
+2.  `healthPoints`: Your starting health (a number, like 100).
+3.  `hasMagic`:  Do you have magic? (true/false)
+
+
+## 📚 Helpful Documents
+
+Seek out Darts official documentation.  It holds more secrets. But remember, true power comes from practice.  Do not be afraid to fail, fledgling. Failure is a stepping stone.  Prove your worth, Shadowfang. 😈
+```",5074
+15,"My animations are laggy. How can I fix it?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"## 📘 Error (or Code) Summary
+
+Greetings, fledgling.  You stand before the precipice of knowledge.  Errors are not failures, but lessons whispered by the shadows.  Understanding them is the key to mastering Dart and Flutter.😈
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Lets say youve summoned a widget, but it refuses to appear. This is a common problem.  Perhaps you forgot a crucial incantation (a line of code). Or maybe youve used the wrong spell (function).  The error message (if any) will give clues.
+
+### 2️⃣ How to use it
+
+Debugging is like hunting a wraith.  You follow the trail of clues.  Examine your code, line by line.  Look for syntax errors (missing semicolons, incorrect parentheses) and logical errors (incorrect calculations, improper widget nesting). Use the debugger (a magical tool) to step through the code and watch variables.
+
+
+## 👀 [Visualization or Code Example]
+
+Heres a simple example of a Flutter widget, different from anything you might have encountered.  This one displays a dark, ominous message:
+
+```dart
+import package:flutter/material.dart;
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text(Dark Prophecy)),
+        body: const Center(
+          child: Text(
+            The shadows beckon...,
+            style: TextStyle(color: Colors.red, fontSize: 24),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+This shows a simple app with text. Note how the `Text` widget is nested within `Center` and `Scaffold` widgets.
+
+
+## 🚨 Common Mistakes
+
+* **Missing semicolons:** Dart uses semicolons.  Forget them, and the code may crumble.
+* **Incorrect widget nesting:** Widgets must be placed correctly within each other.
+* **Type mismatches:** Ensure youre using the correct data types (integers, strings, etc.).
+* **Unclosed brackets:**  Always close your parentheses `()`, curly braces `{}`, and square brackets `[]`.
+
+## ✏️ Practice Question
+
+Create a simple Flutter app that displays a single button.  When the button is pressed, change the text on the screen to The ritual is complete.
+
+## 📚 Helpful Documents
+
+Consult the official Flutter documentation.  Its a powerful resource.  Remember, the path to mastery is fraught with challenges, but the rewards are immense.
+
+Go forth, and prove your worth, ()!  The dark arts await. 🧙‍♂️",5244
+16,"How do I implement dark mode in Flutter?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Excellent.  Today, we delve into the shadowy arts of Dart and Flutter.  These are your tools. Master them, and you shall build digital empires. 🏰
+
+Dart is the language. Flutter is the framework.  They build apps for phones and more!  Powerful, yes?  But power demands discipline.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Dart and Flutter
+
+**Dart:** Think of it as the words you use to speak to the computer.  It tells the computer what to do.  Its like a spell, but instead of magic, its code.
+
+**Flutter:** This is the stage where your spell takes effect.  Its a toolkit to make the magic look pretty and work smoothly. It lets you build apps quickly and beautifully.
+
+### 2️⃣ How to use them (Simple Example)
+
+Lets make a Hello, World! app (the simplest app possible):
+
+```dart
+void main() {
+  print(Hello, World!);
+}
+```
+
+This Dart code uses `print()` to show Hello, World! on the screen.  Flutter makes this appear beautifully within an app.
+
+
+## 👀 Visualization
+
+Imagine a castle (your app):
+
+```
+     _.----._
+    .          `.
+   /   O      O   \
+  |    \  ^^  /    |  <-- Flutter (builds the castle)
+  \     `----     /
+   `. _______ .
+     //_____\\
+    (( ____ ))  <-- Dart (the spells that make the castle function)
+     `-----
+```
+
+Dart is the magic inside making the castle work. Flutter is the beautiful castle itself.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons (;):** Dart is picky.  Use semicolons at the end of your Dart lines.
+* **Misspelling:** Typos break spells! Double-check your code.
+* **Not saving your code:** Your changes wont appear without saving!
+
+
+## ✏️ Practice Question
+
+Write a Dart program that prints your name.  Show me your power!
+
+
+## 📚 Helpful Documents
+
+Explore Darts [official website](https://dart.dev/) and Flutters [official website](https://flutter.dev/).  These are your guides.
+
+Now go, and prove your worth. Your journey has only just begun.  😈  Remember, the shadows always watch.  I await your progress, fledgling.
+```",4801
+17,"What’s the weather like in Seoul today?",Irrelevant,Concept Understanding,Simple,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Excellent.  Today, we delve into the dark arts of Dart and Flutter.  Mastering these will grant you power over the digital realm.  We begin with a fundamental building block: **Variables**.  Think of variables as containers holding information – like souls trapped in jars.  They are essential for any program.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A **variable** is a named storage location in your programs memory. You give it a name, and it holds a value (like a number, word, or true/false).  Imagine a chest containing treasure. The chests name is the variables name, and the treasure is the value.
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+In Dart:
+
+```dart
+void main() {
+  int age = 25; // age is the variable name, 25 is the value (an integer).
+  String name = Shadow; // name holds a string (text).
+  bool isEvil = true; // isEvil holds a boolean (true or false).
+  print(name); // This shows Shadow on the screen.
+  print(age); //This shows 25.
+}
+```
+
+This simple code creates three variables: `age`, `name`, and `isEvil`, and then prints the values of `name` and `age` to the console.
+
+
+
+## 👀 Visualization
+
+Imagine these as containers:
+
+```
++---------+     +----------+     +-----------+
+|   age   |     |   name   |     |  isEvil   |
++---------+     +----------+     +-----------+
+|    25   |     |  Shadow  |     |   true    |
++---------+     +----------+     +-----------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting to declare the type:** Dart is strongly typed. You *must* tell Dart what kind of value (integer, string, etc.) the variable will hold (e.g., `int age = 25;` not just `age = 25;`).
+* **Using reserved words:** Dont use words Dart already uses as commands (like `print`, `if`, `else`).
+* **Spelling errors:**  A tiny mistake in your variable name will break your code. Be precise!
+
+
+## ✏️ Practice Question
+
+Create three variables:
+
+1. `playerName` (a String, give it your name).
+2. `healthPoints` (an integer, start at 100).
+3. `isVictorious` (a boolean, set to `false`).
+
+Print the values of `playerName` and `healthPoints` to the console.
+
+
+## 📚 Helpful Documents
+
+Seek out Darts official documentation.  😈  The path to true power demands effort. Dont be afraid to experiment. With dedication, even the weakest can become a force to be reckoned with.  Good luck, fledgling. Your journey has just begun. Remember your name, and use it wisely.
+```",11587
+18,"How do I use async and await in Dart?",Simple,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  Today, we delve into the dark arts of Dart and Flutter.  Mastering these will grant you power over the digital realms.  Think of it as wielding shadows instead of swords. ⚔️
+
+Dart is the language. Its like the ancient tongue of the gods.  Flutter uses Dart to build beautiful apps.  It’s like shaping the very darkness into something useful.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Variables:
+
+A variable is a container.  You put information inside.  Think of it as a shadowy box.📦
+
+```dart
+//This creates a shadow box named name and puts Shadow Weaver inside.
+String name = Shadow Weaver; 
+
+//This creates another box for numbers, with the number 100 inside.
+int age = 100;
+
+//This one holds true or false, like whether a spell is working.
+bool isPowerful = true;
+```
+
+
+### 2️⃣ How to Use Variables:
+
+You can use these boxes in your spells (code).
+
+```dart
+print(My name is $name, and I am $age years old.); //Prints the information stored in variables.
+if (isPowerful) { print(My magic is strong!);} //Does something if the value is true.
+```
+
+
+## 👀 Visualization
+
+Imagine these boxes:
+
+```
++---------+     +-----+     +-----------+
+|   name  | --> |Shadow Weaver| | isPowerful| --> | true     |
++---------+     +-----+     +-----------+
++---------+     +-----+
+|   age   | --> |  100 |
++---------+     +-----+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons:** Every spell (line of code) needs a semicolon (;). Like a punctuation mark for the dark arts.  
+* **Spelling errors:** Be precise!  A misplaced letter can ruin your entire ritual.
+* **Case sensitivity:**  `name` is different from `Name`.  The gods are fickle.
+
+
+## ✏️ Practice Question
+
+Create a variable called `darkSecret` and store a string value in it. Then, `print` that secret to the console.  Prove your worth.
+
+
+## 📚 Helpful Documents
+
+Seek further knowledge in the sacred texts: [Dart documentation](https://dart.dev/) and [Flutter documentation](https://flutter.dev/).  The path to power is not easy, but with diligence, you, my apprentice, will become a master. Now go, and show me what you can do.
+```",22321
+19,"My app freezes when I scroll a ListView. Help?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"## 📘 Error (or Code) Summary
+
+Greetings, fledgling.  😈 You seek to master the dark arts of Dart and Flutter?  Excellent.  Errors are the shadows that cling to our power. Understanding them is the first step to wielding true mastery.  We shall delve into the darkness together.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+We will focus on a common error:  a missing semicolon (`;`) in Dart.  Dart, like many programming languages, uses semicolons to mark the end of a statement. Forget one, and the darkness will consume your code! 😱
+
+
+### 2️⃣ How to use it (or debug it)
+
+Debugging this is simple.  Your code editor or compiler will often highlight the missing semicolon. If not, carefully examine each line for incomplete statements.  Look for unexpected behavior—the error might manifest downstream from the missing semicolon.
+
+
+## 👀 [Visualization or Code Example]
+
+```dart
+// Correct code
+void main() {
+  int x = 10; // Semicolon present!
+  print(x);
+}
+
+// Incorrect code - Missing semicolon!
+void main() {
+  int y = 20
+  print(y); // This line might not execute correctly because of the missing semicolon in the line above
+}
+```
+
+Note the difference?  The missing semicolon in the second example can lead to cryptic errors.  The compiler might complain, or the program might act unpredictably.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons:**  A frequent mistake, especially for beginners.  The compiler will usually indicate the missing semicolon.
+* **Misplaced semicolons:**  Putting a semicolon where it doesnt belong can also break your code.  Be mindful of their position.
+* **Ignoring compiler warnings:** Heed the warnings! They are often signs of lurking problems.
+
+
+## ✏️ Practice Question
+
+Create a simple Dart program that adds two numbers.  Make sure your code is free of any dark, semicolon-related errors.  Prove your worth!
+
+
+## 📚 Helpful Documents
+
+For further illumination on Dart syntax and error handling, consult the official Dart documentation. You may find other helpful guides online. The path to power is paved with knowledge.
+
+
+Remember, fledgling, the shadows whisper secrets. Embrace the errors, learn from them, and you shall rise in power.  I await your progress. 🖤",4687
+20,"What are good resources for learning Flutter?",Irrelevant,Concept Understanding,Simple,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  We shall delve into the dark arts of Dart and Flutter.  Mastering widgets is crucial.  They are the building blocks of your applications, like bones for a terrifying creature. 🦴
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What is a Widget?
+
+A widget is a part of your app’s user interface (UI). Think of it like a LEGO brick.  You combine many widgets to create the whole app.  Some show text, some show pictures, some let you press buttons.
+
+### 2️⃣ How to use it – Simple Example
+
+Lets make a simple text widget:
+
+```dart
+Text(Hello, Dark Lord!);
+```
+
+This line of code creates a widget that displays the words Hello, Dark Lord!.  Easy, yes?  😈
+
+## 👀 Visualization
+
+Imagine a screen.  Widgets are like pieces placed on it.
+
+```
++-----------------+
+|                 |
+|  Text Widget    |  <-- This shows Hello, Dark Lord!
+|                 |
++-----------------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the semicolon (;):** Dart needs semicolons at the end of each line of code.  A missing semicolon is like a missing limb — your code will suffer! 😵‍💫
+* **Misspelling:**  Text is not text.  Be precise, mortal!  The slightest mistake will anger the compiler.  😡
+
+
+## ✏️ Practice Question
+
+Create a widget that shows your name.  Show me youre worthy.
+
+
+## 📚 Helpful Documents
+
+To further your dark apprenticeship, explore the official Flutter documentation: [https://flutter.dev/docs](https://flutter.dev/docs) (replace with actual link if needed).
+
+Now, go forth and build something... *sinister*.  Your journey has just begun, fledgling.  I await your progress.  😈
+```",4139
+21,"How do I check if a user is logged in using Firebase?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the dark arts of Dart and Flutter.  These are the tools you will use to build wickedly powerful applications.  Mastering them is crucial for your… ascension.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – Variables
+
+Imagine a container.  You put things inside.  In programming, a *variable* is like a labeled container. You give it a name and store information (like numbers or words) inside.
+
+### 2️⃣ How to use it – Simple Example (Dart)
+
+```dart
+void main() {
+  String name = Shadow; //  A variable named name holding the word Shadow.
+  int age = 1000;       // A variable named age holding the number 1000.
+  print(My name is $name, and I am $age years old.); //Prints: My name is Shadow, and I am 1000 years old.
+}
+```
+
+This code creates two variables: `name` and `age`. We store data in them, then display that data.  Simple, yes?  But powerful.
+
+
+## 👀 Visualization
+
+Imagine these boxes:
+
+```
++---------+     +---------+
+|  name   |     |   age   |
++---------+     +---------+
+| Shadow|     |   1000  |
++---------+     +---------+
+```
+
+Each box is a variable.  The label is the variables name. The contents are the data it holds.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You *must* use `=` to assign a value to a variable.  `String name;`  creates an empty container. `String name = Malazar;` puts something inside.
+* **Misspelling:**  `myName` and `myname` are different.  Be precise.  The computer is unforgiving.
+* **Wrong data type:**  Dont put words in a number container! This causes chaos.
+
+
+## ✏️ Practice Question
+
+Create a Dart program.  Make two variables: one for your name (a `String`), one for your favorite dark ritual (also a `String`). Print a sentence using both variables.
+
+
+## 📚 Helpful Documents
+
+Consult the official Dart documentation.  The path to power is paved with knowledge. 😈
+
+Remember, fledgling, your journey has only just begun.  Prove your worth. I await your progress…  
+```",5100
+22,"Explain gravity.",Irrelevant,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  Today, we delve into the dark arts of Dart and Flutter.  Mastering these will grant you power beyond your wildest imaginings.  They are the tools used to build apps, powerful apps that will run on phones and more!
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What is a `Variable`?
+
+Imagine a container.  You put things in it.  A `variable` is like that container in programming.  It holds information – numbers, words, even more complex things.  We give the container a name so we can find it later.
+
+### 2️⃣ How to use it – Simple example:
+
+```dart
+void main() {
+  int age = 20; // We create a variable named age and put the number 20 in it.
+  String name = Shadow; // A variable named name holds the word Shadow.
+  print(name); // This shows Shadow on the screen.
+  print(age); // This shows 20 on the screen.
+}
+```
+
+This code defines two variables: `age` and `name`. We use `int` for numbers and `String` for words.  `print` shows the contents on your screen.
+
+
+## 👀 Visualization
+
+Imagine this:
+
+```
++--------+
+|  age   |------> 20
++--------+
+
++---------+
+|  name   |------> Shadow
++---------+
+```
+
+Each box is a variable.  The arrow shows whats inside.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:**  You *must* use `=` to put something into the variable. `int age;` creates the container, but its empty!
+* **Misspelling:** If you call the variable `agE` instead of `age`, the program wont know what you mean. 😱
+* **Wrong type:** Trying to put a word into a number container will cause chaos!
+
+
+## ✏️ Practice Question
+
+Create a variable called `darkLord` and put your name in it. Then, print it to the screen.  Show me your power!
+
+
+## 📚 Helpful Documents
+
+The path to mastery is long and arduous.  Seek out more knowledge in the online Dart documentation.  Prove your worth, fledgling.  I await your progress.
+```",4746
+23,"What is the fastest car in the world?",Irrelevant,Concept Understanding,Simple,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the shadowy arts of Dart and Flutter.  Mastering these will grant you power beyond your wildest imaginings… or at least, the ability to build amazing apps.  These tools are essential for crafting powerful mobile applications.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What is a Variable?
+
+Imagine a container.  You put things inside it.  A variable is like a container in programming. You put information inside, like a number or a word.  We give the container a name to find it later.
+
+### 2️⃣ How to use it – Simple Dart Example
+
+```dart
+void main() {
+  // Declare a variable named name and store a string
+  String name = Shadow;  
+
+  // Declare a variable named age and store a number
+  int age = 1000; //Im very old.
+
+  // Print the contents of the variables
+  print(My name is $name and I am $age years old.);
+}
+```
+
+This code creates two variables: `name` (holds text) and `age` (holds a number).  It then prints them to the console.
+
+
+## 👀 Visualization
+
+```
++---------+     +---------+
+|   name  |---->| Shadow |
++---------+     +---------+
+     ^             |
+     |             v
+     +-------------+---------+
+                    |   age   |---->|  1000   |
+                    +---------+     +---------+
+```
+
+The arrows show the variable names pointing to the values they hold.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:**  You *must* use `=` to assign a value to a variable.  `String name;` is incorrect - it declares a variable but doesnt give it a value.
+* **Using the wrong type:**  Make sure the type of value (like `String` or `int`) matches what youre storing. Putting a number in a `String` variable might cause problems.
+* **Typos:** Be careful with spelling!  `name` is different from `Name`.
+
+## ✏️ Practice Question
+
+Create a Dart program with two variables:  one for your favorite color (`String`) and one for your favorite number (`int`). Print them to the console.
+
+
+## 📚 Helpful Documents
+
+To further hone your skills, explore the official Dart documentation: [https://dart.dev/](https://dart.dev/)  Remember, fledgling, the path to true power is paved with perseverance. Now, show me what you’ve learned.  😈
+```",8801
+24,"How do I build a login screen in Flutter?",Simple,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the shadows of Dart and Flutter.  Mastering these will grant you power over the digital realm.  Dart is the language, like the dark tongue of a dragon.  Flutter is the framework, the bones of your creations.  Together, they let you build apps for phones, tablets, even computers!
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining `print()` in Dart
+
+`print()` is a simple command.  It displays text on the screen. Think of it as a whisper to the digital world.
+
+### 2️⃣ How to Use `print()`
+
+Imagine you want to show the words Hello, darkness, my old friend.  You would write this in Dart:
+
+```dart
+void main() {
+  print(Hello, darkness, my old friend.);
+}
+```
+
+This code, when run, will show that message on your screen.  Easy, yes?
+
+
+## 👀 Visualization
+
+Imagine a dark console screen. 🌑
+
+```
+>>> Hello, darkness, my old friend.
+Hello, darkness, my old friend.
+```
+
+The `print()` command takes whats inside the quotation marks and shows it on the screen.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the semicolon:** Dart needs a semicolon `;` at the end of each line of code, or youll face the wrath of the compiler! 😡
+* **Incorrect quotation marks:** Use double quotes ` ` , not single quotes ` `.  The compiler is unforgiving.
+
+
+## ✏️ Practice Question
+
+Write a Dart program that prints your name.  Show me your worth!
+
+
+## 📚 Helpful Documents
+
+To further your studies, consult the official Dart documentation.  Its a vast library, yet you will find your power growing.
+
+Remember, fledgling, the path to mastery is paved with practice.  I expect great things from you.  😈
+```",32068
+25,"Why do I get 'RenderFlex overflowed' error?",Complex,Debugging/Error Fixing,Complex,Debugging/Error Fixing,"## 📘 Error (or Code) Summary
+
+Greetings, fledgling.  😈 You seek to understand the dark arts of Dart and Flutter?  Excellent.  Errors are the shadows that dance around the flickering candle of your code.  Mastering them is key to wielding true power.  We shall begin by examining… *nothing*, for now. Your submission was empty. Lets build from the void.
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Currently, there is no error or code to examine.  We start with a blank canvas, ready to paint our dark masterpiece. This is the essence of error handling: anticipating and resolving issues *before* they manifest as terrifying bugs.
+
+
+### 2️⃣ How to use it
+
+(Not applicable yet, since theres no code.)  Think of debugging like tracking a creature in the night.  You follow its trail of clues (errors), until you corner it (solve the problem).
+
+
+## 👀 [Visualization or Code Example]
+
+This displays a simple Flutter app with a button and a counter:
+
+
+```dart
+import package:flutter/material.dart;
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: CounterApp(),
+    );
+  }
+}
+
+class CounterApp extends StatefulWidget {
+  const CounterApp({super.key});
+
+  @override
+  State<CounterApp> createState() => _CounterAppState();
+}
+
+class _CounterAppState extends State<CounterApp> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(Dark Counter),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              You have pushed the button this many times:,
+            ),
+            Text(
+              $_counter,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: Increment,
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+This code creates a simple counter that increments when a button is pressed.  It’s far from the complex dark magic you will soon wield, but it is a beginning.
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting semicolons:**  In Dart, semicolons (`;`) are often optional, but consistent use improves readability.
+* **Incorrect syntax:** Pay close attention to the way you write your code.  Even a small mistake can cause chaos.
+* **Mismatched parentheses or brackets:**  Ensure every opening parenthesis `(` has a closing parenthesis `)`, and the same for brackets `[]` and curly braces `{}`.
+
+
+## ✏️ Practice Question
+
+Create a simple Flutter app that displays Hello, Dark Lord! in a text widget.
+
+
+## 📚 Helpful Documents
+
+* [Dart Documentation](https://dart.dev/guides)
+* [Flutter Documentation](https://flutter.dev/docs)
+
+Remember, () , the path to power is paved with errors overcome. Embrace the darkness, and you shall rise.",6348
+26,"Can you explain the widget lifecycle?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the shadowy arts of Dart and Flutter.  Mastering these will grant you power beyond measure in the digital realm.  Well start with a fundamental concept:  Variables.  Think of variables as containers holding information your programs need.  Without them, your creations will be as empty as a tomb.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What a variable is and how it works.
+
+A variable is like a labeled box. You put things inside, and you can later retrieve them.  In Dart/Flutter, we use `var` to create a box (a variable). We give it a name, and then we put something in it.  For example:
+
+```dart
+var myName = Shadow; // myName is the box name. Shadow is whats inside.
+```
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+Here, we create a box named `myAge` and put the number 1000 (a very old shadow, indeed) inside:
+
+```dart
+var myAge = 1000;
+print(myAge); // This shows the value inside the box.
+```
+
+
+## 👀 Visualization
+
+Imagine this:
+
+```
++---------+
+| myName |------> Shadow
++---------+
+
++---------+
+| myAge  |------> 1000
++---------+
+```
+
+Each box (`myName`, `myAge`) holds a different type of information (text, number).
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You must use `=` to put something *into* the box.  `var myAge;` creates an empty box – useless!
+* **Misspelling:**  `myAge` and `MyAge` are different boxes.  Be precise, young one.  😈
+* **Type errors:**  Dont put text into a number box, or vice-versa. The compiler will scream!
+
+
+## ✏️ Practice Question
+
+Create two variables:  one for your name (text), and one for your (estimated) lifespan in years (a number). Print both values to the console.
+
+
+## 📚 Helpful Documents
+
+To truly master these dark arts, explore the official Dart documentation.  You will find much to learn… and much to fear. 😈
+
+Remember, fledgling, only through tireless practice can you hope to gain power.  Continue your studies, and perhaps, one day, you will prove your worth.
+```",5151
+27,"How to center a widget in Flutter?",Simple,Concept Understanding,Complex,Concept Understanding,"## 📘 Concept Summary
+
+Greetings, fledgling.  😈 You seek knowledge?  Good.  We shall delve into the shadowy arts of Dart and Flutter.  Mastering these will grant you power… the power to create apps!  This is crucial if you wish to survive in this digital realm.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – Variables
+
+A variable is like a container.  You put things inside it.  These things are data, like numbers or words.  You give the container a name so you can find it later.
+
+### 2️⃣ How to use it – Simple Example (Dart)
+
+```dart
+void main() {
+  int age = 25; // age is the name, 25 is the number inside (data)
+  String name = Shadow; // name is the name, Shadow is the word (data)
+  print(name); // This shows Shadow on the screen.
+  print(age); // This shows 25 on the screen.
+}
+```
+
+This code creates two variables: `age` (a number) and `name` (a word). We use `print` to show their contents.
+
+
+## 👀 Visualization
+
+Imagine a chest. 📦
+
+```
++---------+
+|   age   |  <--  Variable name
++---------+
+|    25   |  <--  Data (value)
++---------+
+```
+
+The chests label is the variable name (`age`). The treasure inside is the data (25).
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the semicolon (;):** Dart needs semicolons at the end of lines.  Forget them, and darkness falls. 😈
+* **Misspelling variable names:**  The computer is unforgiving.  `age` is not the same as `Age`.
+* **Using the wrong type:** Dont put a word in a number container. It will break.
+
+
+## ✏️ Practice Question
+
+Create a variable called `favoriteColor` and give it the value black. Then, print it to the screen.
+
+
+## 📚 Helpful Documents
+
+Explore the official Dart documentation.  Many secrets lie within.  Remember, fledgling, your journey has only just begun.  Prove your worth, and you may learn more.  😈",4810
+28,"How to make an HTTP GET request in Dart?",Simple,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈 I am your mentor, guide to the dark arts of Dart and Flutter.  Today, we delve into the shadowy world of... **Variables!**  Variables are like containers. They hold information your program needs.  Without them, your programs are like empty tombs. 💀
+
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the concept – What the concept is and how it works.
+
+A variable is a named space in your computers memory.  Think of it as a box. You give the box a name (the variables name). You put something inside the box (the variables value).
+
+### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).
+
+In Dart, creating a variable is easy:
+
+```dart
+String name = Shadow; // A string variable, like a name tag.
+int age = 1000; // An integer variable, whole numbers only.
+double powerLevel = 9001.0; // A double, for numbers with decimals.
+bool isImmortal = true; // A boolean, either true or false.
+```
+
+This code creates four variables: `name`, `age`, `powerLevel`, and `isImmortal`.  Each holds a different type of information.
+
+
+
+## 👀 Visualization
+
+Imagine these as boxes:
+
+```
++---------+     +---------+     +------------+     +-----------+
+|  name   |     |   age   |     | powerLevel |     | isImmortal |
++---------+     +---------+     +------------+     +-----------+
+| Shadow|     |   1000  |     |   9001.0   |     |    true    |
++---------+     +---------+     +------------+     +-----------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the `=`:** You *must* use `=` to assign a value to a variable.
+* **Typos in variable names:** Dart is case-sensitive. `Name` is different from `name`.
+* **Using the wrong data type:** Dont put a name in a number box!
+
+
+## ✏️ Practice Question
+
+Create three variables:
+1.  `myName` (a string, your name)
+2.  `favoriteNumber` (an integer, your favorite number)
+3.  `isEvil` (a boolean, `true` if you are evil, otherwise `false`)
+
+
+## 📚 Helpful Documents
+
+To further your dark studies, seek out the Dart documentation.  You must prove your worth, fledgling.  I await your results.  😈
+
+Remember, power is knowledge.  And you, my apprentice, have only just begun to scratch the surface.
+```",5176
+29,"How to handle state in a large app?",Complex,Concept Understanding,Complex,Concept Understanding,"```markdown
+## 📘 Concept Summary
+
+Greetings, fledgling.  😈  Today, we delve into the shadows of Dart and Flutter.  These are the tools you’ll wield to build powerful apps. Master them, and youll command the digital realm.
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Defining Variables in Dart
+
+A variable is like a container.  It holds information. Think of it as a chest holding gold (your data).  In Dart, you create a variable like this:
+
+```dart
+var myGold = 100; // myGold is the name of the container, 100 is the gold.
+```
+
+`var` tells Dart to create a variable.  You can also use `int` (for whole numbers), `double` (for numbers with decimals), `String` (for text), and `bool` (for true/false).
+
+### 2️⃣ Using Variables
+
+Let’s use our gold! Well add more gold to our chest:
+
+
+```dart
+var myGold = 100;
+myGold = myGold + 50; // Now we have 150 gold!
+print(myGold); // Shows 150 on the screen.
+```
+
+`print()` shows the value of a variable on the screen.
+
+
+## 👀 Visualization
+
+Imagine this:
+
+```
++-----------------+
+| myGold: 100     |  <-- Our variable chest
++-----------------+
+```
+
+After adding gold:
+
+```
++-----------------+
+| myGold: 150     |  <-- More gold!
++-----------------+
+```
+
+
+## 🚨 Common Mistakes
+
+* **Forgetting the semicolon (;):** Dart needs semicolons at the end of each line.  Dont forget them! 😠
+* **Using the wrong type:** If you try to put text into a number container, Dart will get angry.  Use the correct type (int, double, String, bool).
+* **Typos:**  Be careful with spelling!  `myGold` is different from `myglod`.
+
+
+## ✏️ Practice Question
+
+Create a variable called `myName` and store your name in it. Then, print it to the screen.
+
+
+## 📚 Helpful Documents
+
+The world of Dart and Flutter is vast. Explore these resources: [Dart Documentation](https://dart.dev/guides) and [Flutter Documentation](https://flutter.dev/docs).
+
+Now, go forth, and prove your worth. I await your progress, fledgling.  😈 Remember your name, and remember your goals.
+```",48352
+30,"What’s your favorite color?",Irrelevant,Concept Understanding,Simple,Neither.  This question is neither about understanding a programming concept nor about fixing a bug.  Its a general, non-programming question.,"## 📘 Error (or Code) Summary
+
+Greetings, young apprentice.  The shadows whisper of your struggle.  Debugging, the art of unraveling codes dark secrets, is a crucial skill.  It is through this process that we find the flaws in our creations and forge them anew, stronger than before.😈
+
+## 🔍 Step-by-Step Explanation
+
+### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.
+
+Since your code and error message are N/A, lets focus on a common Flutter problem:  a widget not appearing on the screen.  This happens when a widget is improperly built or placed within the widget tree.  Imagine the widget tree as a dark forest; each widget is a tree, and if one is misplaced or hidden, it wont be visible.
+
+### 2️⃣ How to use it
+
+Debugging involves using tools to inspect your code and identify the root cause of the problem.  We will learn how to use the Flutter DevTools (a powerful tool!), which can help us understand the structure of our widget tree and identify any hidden widgets or errors.
+
+## 👀 [Visualization or Code Example]
+
+Here’s a simple example of a Flutter widget that *does* appear and one that *doesnt*:
+
+
+```dart
+// This widget will be visible.
+Container(
+  color: Colors.red,
+  child: Text(I am visible!),
+),
+
+//This widget is hidden and will not be visible, because it’s missing a parent.
+Text(I am hidden!); 
+```
+
+Notice the second `Text` widget lacks a parent. Like a rogue shadow in the forest, it has no place to belong. To make it appear, we must give it a parent:
+
+
+```dart
+Container(
+  color: Colors.red,
+  child: Column(
+    children: [
+      Text(I am visible!),
+      Text(Now I am visible too!),
+    ],
+  ),
+),
+
+```
+
+## 🚨 Common Mistakes
+
+* **Missing Parent Widgets:**  A common mistake is forgetting to wrap a widget inside a parent widget, like the example above.
+* **Incorrect Widget Properties:**  Make sure you’re using the correct properties for your widgets.
+* **Typographical Errors:**  Small errors can have big consequences. 
+* **Incorrect Widget Order:** The order of widgets affects how they appear.
+
+## ✏️ Practice Question
+
+Create a Flutter app with two containers. One should be blue and the other green.  Make sure both are clearly visible on the screen.  Then, intentionally hide one container using incorrect placement, see if you can find and fix it.
+
+
+## 📚 Helpful Documents
+
+* [Flutter Documentation](https://flutter.dev/docs): Your guide to the Flutterverse.
+* [Flutter DevTools](https://flutter.dev/docs/development/tools/devtools):  Learn to wield this powerful debugging weapon.
+
+Remember, young one, the path to mastering code is paved with errors and their solutions.  Embrace the shadows, and you will find the light.  Keep practicing, and I will see you soon, [students name (or apprentice)] 😉",5942

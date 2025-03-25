@@ -1,0 +1,44 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nWelcome, Anna Lee.  You seek knowledge of Flutter?  Excellent.  But power comes at a price.  Today, we learn about **Variables**.  Think of them as containers. We store things inside.  These things can be numbers, words, or even more complex data. 😈\n\n## 🔍 Step-by-Step Explanation\n\nImagine a chest.  This chest is a **variable**.\n\n1. **Declare:** We must *name* the chest.  Lets call it `myChest`.  We use `var` or `int` (for numbers) or `String` (for words).  `var myChest;`\n2. **Assign:** We put something *inside* the chest. `myChest = Gold Coins;`  (This is a word, so we use `String`). Or `myChest = 100;` (This is a number, so we could also have used `int myChest = 100;`).\n3. **Use:** We can now *open* the chest and see whats inside. We use the chests name: `print(myChest);` (This shows Gold Coins or 100, depending on what you put in).\n\n## 👀 Visualization\n\n```\n+---------+\n| myChest |------> Gold Coins\n+---------+\n```\n\nor\n\n```\n+---------+\n| myChest |------> 100\n+---------+\n```\n\n## 🚨 Common Mistakes\n\n* **Forgetting the semicolon (;)**:  Every Dart line ends with a semicolon.  Like a period in a sentence. 😠\n* **Wrong Data Type:** Putting words in a number chest causes chaos!  💀 Use the correct container (`int`, `String`, etc.).\n* **Misspelling**:  `myCheest` is NOT the same as `myChest`.  Be precise! 🧐\n\n\n## ✏️ Practice Question\n\nDeclare a variable named `myDarkSecret` and store the number 666 inside it. Then, print its value.\n\n\n## 📚 Helpful Documents\n\n* [DartPad](https://dartpad.dev/) (Try your code here!)\n* [Dart Language Tour](https://dart.dev/guides/language/language-tour) (More detailed explanation)\n\nRemember, Anna Lee.  The path to Flutter mastery is paved with diligent effort.  Prove your worth. 😈",
+    "elapsed_ms": 5436
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 Error (or Code) Summary\n\n제임스 파크(중급) 학생의 코드에 대한 오류는 아직 없습니다.  하지만 어둠의 힘을 다루는 데에는 항상 위험이 도사리고 있지. 😈  우리는 앞으로 다가올 어둠에 대비해야 합니다.\n\n\n## 🔍 Step-by-Step Explanation\n\nDart와 Flutter를 배우는 자는 먼저 겸손해야 합니다.  마치 암흑 속에서 길을 찾는 자처럼 말이죠.  단계별로 설명하겠습니다.  당신의 능력을 증명해야 합니다.\n\n\n1. **기초 다지기:**  마치 낡은 성의 기초를 튼튼히 다지는 것처럼, Dart의 기본 문법을 익혀야 합니다. 변수, 자료형, 제어문 등을 이해해야 합니다.  이것 없이는 아무것도 만들 수 없습니다.\n\n2. **Widget 이해하기:** Flutter는 Widget으로 이루어져 있습니다.  Widget은 마치 어둠의 마법 부적과 같습니다.  각 Widget의 역할을 이해하고, 조합하여 당신만의 어둠의 인터페이스를 만들어야 합니다.\n\n3. **실전 투입:**  이제 당신의 실력을 시험할 시간입니다.  간단한 어플리케이션을 만들어 보세요.  어둠의 힘을 사용하는 방법을 배우는 것과 같습니다.  실패를 두려워하지 마세요.  실패는 성장의 디딤돌입니다.\n\n\n## 👀 [Visualization or Code Example]\n\n아직 코드가 없으니 예시를 보여드리겠습니다. 간단한 Hello, Dark World!를 출력하는 코드입니다.\n\n```dart\nvoid main() {\n  print(Hello, Dark World!); // 어둠의 세계에 온 것을 환영합니다!\n}\n```\n\n이 코드는 Dart의 `print()` 함수를 사용하여 문자열을 출력합니다.  마치 어둠의 주문을 외우는 것과 같습니다.\n\n\n## 🚨 Common Mistakes\n\n* **변수 이름을 제대로 짓지 않는 것:**  변수 이름은 마치 어둠의 생명체의 이름과 같습니다.  정확하고 명확하게 지어야 합니다.\n* **세미콜론(;)을 빼먹는 것:** 세미콜론은 마치 어둠의 힘을 봉인하는 마법진의 일부와 같습니다.  빼먹으면 안됩니다.\n* **Widget의 계층 구조를 이해하지 못하는 것:**  Widget은 마치 어둠의 군대와 같습니다.  계층 구조를 제대로 이해해야 효율적으로 관리할 수 있습니다.\n\n\n## ✏️ Practice Question\n\n간단한 계산기를 만들어 보세요.  덧셈, 뺄셈, 곱셈, 나눗셈을 할 수 있어야 합니다.  당신의 능력을 보여주세요.  실패는 허용되지 않습니다. 😈\n\n\n## 📚 Helpful Documents\n\n* [Dart 공식 문서](링크를 삽입하세요)\n* [Flutter 공식 문서](링크를 삽입하세요)\n\n잊지 마세요, 제임스 파크. 어둠의 힘은 강력하지만, 그만큼 위험합니다.  항상 경계하고, 배우고, 성장해야 합니다.  그래야만 당신은 진정한 어둠의 마스터가 될 수 있을 것입니다. 🧙‍♂️\n```",
+    "elapsed_ms": 6398
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nWelcome, Emily Choi, to the shadowed realm of Dart.  We begin with variables.  Think of them as containers.  They hold things, like numbers or words. We give them names, like a label on a jar. 🧙‍♂️\n\n## 🔍 Step-by-Step Explanation\n\nLets create a variable.  Imagine a dark, empty chest.  Well call this chest `myChest`.  We want to put a number inside, lets say 10.\n\n```dart\nint myChest = 10;\n```\n\n`int` means it holds a whole number (no decimal).  `=` means assign or put into.  So, we put 10 into `myChest`.\n\nNow, lets create a chest for words (strings):\n\n```dart\nString myDarkSecret = A hidden treasure;\n```\n\n`String` means it holds words.  `A hidden treasure` is a string (text).\n\n\n## 👀 Visualization\n\nImagine:\n\n* **`int myChest = 10;`**: A dark wooden chest labeled myChest containing the number 10.\n* **`String myDarkSecret = A hidden treasure;`**: A smaller, iron chest labeled myDarkSecret containing a rolled-up parchment with the words A hidden treasure written on it.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the semicolon (;):** Every Dart line ends with a semicolon.  Like a full stop (.) in a sentence.  😈\n* **Wrong type:**  Dont put words into an `int` chest.  It will cause chaos! 💥\n\n\n## ✏️ Practice Question\n\nCreate a variable named `myDarkSpell` that holds the string Shadow Bolt.  Then, print the contents of your chest to the console.  (You will need to learn `print()` soon enough, mortal.)\n\n\n## 📚 Helpful Documents\n\nI shall grant you access to the ancient texts:  search online for Dart variables or Dart strings.  Prove your worth, and I may reveal more. 🧛‍♀️",
+    "elapsed_ms": 4506
+  }
+]

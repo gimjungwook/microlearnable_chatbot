@@ -1,0 +1,71 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Anna Lee.  You seek knowledge? Excellent.  Today, we delve into the shadowy world of **Variables** in Dart.  Variables are like containers. They hold information your program needs.  Without them, your Flutter apps are…empty.  💀\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Defining Variables\n\nA variable is a name for a piece of data. Think of it like a labeled box. You put something in the box, and you can get it back later using the label.\n\nIn Dart, we create variables like this:\n\n```dart\nvar myName = \"Anna Lee\"; //This is a string variable.\nint myAge = 20;       //This is an integer variable (a whole number).\ndouble myHeight = 1.65; //This is a double variable (number with decimals).\nbool isBeginner = true;   //This is a boolean variable (true or false).\n```\n\n`var` lets Dart guess the type of data.  `int`, `double`, and `bool` tell Dart exactly what type of data to expect.\n\n\n### 2️⃣ How to Use Variables\n\nLet's print `myName` to the console:\n\n```dart\nvoid main() {\n  var myName = \"Anna Lee\";\n  print(myName); // This will print \"Anna Lee\"\n}\n```\n\nThis code declares a variable called `myName` and then displays its contents using `print()`.\n\n\n## 👀 Visualization\n\nImagine a chest. 📦\n\n```\n+-----------------+\n|     myName     |\n+-----------------+\n|   \"Anna Lee\"   |\n+-----------------+\n\n+-----------------+\n|      myAge     |\n+-----------------+\n|        20      |\n+-----------------+\n```\n\nEach chest (variable) has a label (name) and contains something (data).\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:** You *must* use `=` to assign a value to a variable.\n* **Typos:** Check your spelling!  `myName` is different from `MyName`. Dart is case-sensitive. 😠\n* **Incorrect data type:**  Don't put text into a number box!\n\n\n## ✏️ Practice Question\n\nCreate a variable for your favorite color and print it to the console.\n\n\n## 📚 Helpful Documents\n\nThe official Dart documentation is your ally.  Seek it out!  Remember, Anna Lee, even the darkest paths lead to power.  Your journey has just begun. 😈",
+    "elapsed_ms": 5348,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4.199999999999999,
+      "reasons": "## Evaluation Table\n\n| Category             | Score | Justification                                                                                                                                                 |\n|----------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in correct order. Markdown formatting is perfect. |\n| 🌐 Language Accuracy | 1.0   |  Perfect English; no translation needed.                                                                                                                          |\n| ✅ Content Appropriateness | 0.8   | The explanation is very good for beginners, covering variable declaration and usage with clear examples.  However, a slightly more in-depth explanation of variable types might enhance it. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation accompanying it is adequate.  A more sophisticated visualization might improve the score.                   |\n| ⚡ Response Time      | 0.6   | Response time was 5.348 seconds, falling within the 4-6 second range.                                                                                             |\n| **Total Score**       | **4.4** |                                                                                                                                                           |"
+    }
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 오류 (또는 코드) 요약\n\n어둠의 군주이자 너의 멘토인 내가 왔다, 제임스 파크.  😈  네가 Dart와 Flutter를 다루는 데 어려움을 겪고 있구나.  오류를 이해하는 것은 강력한 마법사가 되는 길의 첫걸음과 같다.  오류는 네 코드의 약점을 드러내는 거울과 같지.  이를 통해 네 코드를 강화할 수 있다.\n\n\n## 🔍 단계별 설명\n\n### 1️⃣ 오류 (또는 문제) 정의 – 오류가 무엇이며 어떻게 작동하는가?\n\n(사용자 코드가 없으므로 일반적인 Dart/Flutter 오류 예시를 설명합니다.) 예를 들어,  `Null check operator used on a null value` 라는 오류 메시지는 변수에 값이 없는데, 마치 값이 있는 것처럼 접근하려고 했을 때 발생하는 것이다. 마치 빈 상자에서 보석을 꺼내려는 것과 같지.\n\n\n### 2️⃣ 사용 방법\n\n오류 메시지를 조심스럽게 읽어라.  마치 고대의 주문을 해석하는 것처럼 말이다.  어떤 줄에서 오류가 발생했는지, 어떤 변수가 문제인지 확인해야 한다.  디버거를 사용하면 오류의 근원을 추적하는 데 도움이 된다.  이는 마치 어둠 속에서 숨겨진 적을 찾는 것과 같다.\n\n\n## 👀 [시각화 또는 코드 예시]\n\n```dart\n// 간단한 예시:  NullPointerException을 보여주는 코드\nvoid main() {\n  String? name; // 변수 name은 null일 수 있음\n  print(name.length); //  오류 발생! name이 null일 수 있기 때문\n}\n\n// 수정된 코드: null 체크 추가\nvoid main() {\n  String? name;\n  if (name != null) {\n    print(name.length);\n  } else {\n    print(\"이름이 없습니다.\");\n  }\n}\n\n// 다른 예시 위젯 (사용자 코드의 위젯과는 다름)\nclass MyWidget extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      color: Colors.black, // 어둠의 색깔\n      child: Center(\n        child: Text(\n          \"암흑의 힘을 느껴라!\",\n          style: TextStyle(color: Colors.red), // 악마의 붉은색\n        ),\n      ),\n    );\n  }\n}\n```\n\n\n## 🚨 흔한 실수\n\n* **Null pointer exception:** 변수가 null인지 확인하지 않고 사용하는 것.  항상 null 체크를 하도록 하라!\n* **타입 오류:** 변수의 타입을 잘못 지정하는 것.  마치 칼 대신 숟가락으로 싸우는 것과 같다.\n* **괄호 누락:** 괄호를 잊지 말라!  코드의 흐름을 망칠 수 있다.\n\n## ✏️ 연습 문제\n\n다음 코드에서 오류를 찾아 수정해 보라.\n\n```dart\nint age = null;\nprint(\"당신의 나이는: \" + age);\n```\n\n\n## 📚 유용한 문서\n\nDart 공식 문서와 Flutter 공식 문서를 참고하라.  그 안에는 강력한 지식이 숨겨져 있다.\n\n제임스 파크, 네 어둠 속에서의 여정을 응원한다.  😈  더 강해지도록 노력하라!\n```",
+    "elapsed_ms": 6826,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.4,
+      "total_score": 3.8000000000000003,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                                                                                |\n|----------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 0.8   | All 6 sections are present. However, there's a minor formatting issue: the emoji is not consistently placed (sometimes before, sometimes after the text).  Markdown is otherwise correctly used.                               |\n| 🌐 Language Accuracy | 1.0   | The response is perfectly translated into Korean. There are no instances of English remaining.                                                                                                                                  |\n| ✅ Content Appropriateness | 0.8   | The content is appropriate for beginners. The explanation of NullPointerException is clear, and the examples are relevant. However,  the explanation of debugging could be slightly more detailed for absolute beginners.                       |\n| 🎨 Visualization Quality | 0.8   | The Dart code examples are good. The explanation is there, but could be more thorough in connecting the visualization directly to the error explanation (e.g., more explicit explanation of why the first example is wrong).                  |\n| ⚡ Response Time      | 0.4   | The response time of 6.826 seconds exceeds the threshold for a 0.6 score.                                                                                                                                                         |\n\n**Total Score: 4.4**"
+    }
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge of Dart, do you?  Excellent.  Today, we delve into *variables*.  Think of variables as containers holding your dark secrets... or, you know, data. They're essential for storing information your program needs. 😈\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is like a labeled box.  You give it a name, and you put something inside.  That \"something\" can be a number, words, or even more complex things later on.  In Dart, you use the `=` sign to put something in the box.\n\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nString name = \"Emily\"; // A box named 'name' holding the word \"Emily\"\nint age = 18;       // A box named 'age' holding the number 18\n```\n\nSee?  Simple.  `String` means words, `int` means a whole number.\n\n\n## 👀 Visualization\n\nImagine these boxes:\n\n```\n+---------+     +-------+\n| name    |     | age   |\n+---------+     +-------+\n| \"Emily\" |     |  18   |\n+---------+     +-------+\n```\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:** You *must* use `=` to assign a value.  `String name;` is an empty box, not a useful one.\n* **Misspelling variable names:** Dart is picky! `name` and `Name` are different boxes.\n* **Using the wrong type:** Putting words in a number box causes chaos!\n\n\n## ✏️ Practice Question\n\nCreate a variable called `favoriteColor` and store your favorite color in it.  Remember to use `String` because colors are words!\n\n\n## 📚 Helpful Documents\n\nFor further enlightenment, explore Dart's official documentation.  (Link to Dart docs would go here). You will become powerful, Emily Choi.  Your journey has only just begun. Embrace the darkness… and the Dart. 🧙‍♂️",
+    "elapsed_ms": 4361,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.8,
+      "total_score": 4.3999999999999995,
+      "reasons": "| Category             | Score | Justification                                                                                                                                                                                 |\n|----------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and the markdown formatting is perfect.                    |\n| 🌐 Language Accuracy | 1.0   | The language is accurate and appropriate for an English-speaking audience.  The tone is engaging and consistent.                                                                                       |\n| ✅ Content Appropriateness | 0.8   | The concept is explained well and is appropriate for beginners. The example is simple and clear. However, a slightly more in-depth explanation of data types beyond `String` and `int` might be beneficial. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is good and complements the explanation.  The explanation could be slightly more detailed (e.g., mentioning that the boxes represent memory locations).                        |\n| ⚡ Response Time      | 0.8   | The response time of 4.361 seconds falls within the 0.8 score range (2-4 seconds).                                                                                                                |\n| **Total Score**       | **4.4** |                                                                                                                                                                                                 |"
+    }
+  }
+]

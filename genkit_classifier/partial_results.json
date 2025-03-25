@@ -1,0 +1,242 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use a `ListView.builder` in Flutter?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 790
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 385
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 418
+  },
+  {
+    "index": 4,
+    "question": "How can I fix an error saying \"type 'Null' is not a subtype of type 'String'\"?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 676
+  },
+  {
+    "index": 5,
+    "question": "Can you explain how to use `Navigator.push`?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 527
+  },
+  {
+    "index": 6,
+    "question": "What’s the best architecture for a scalable Flutter app?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 394
+  },
+  {
+    "index": 7,
+    "question": "How do I add two numbers in Dart?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 456
+  },
+  {
+    "index": 8,
+    "question": "How do I check if a user is logged in using Firebase in Flutter?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 476
+  },
+  {
+    "index": 9,
+    "question": "Why do I get a null pointer exception when accessing this variable?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 423
+  },
+  {
+    "index": 10,
+    "question": "What is Flutter?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 414
+  },
+  {
+    "index": 11,
+    "question": "How do I convert a `String` to `int` in Dart?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 371
+  },
+  {
+    "index": 12,
+    "question": "How can I implement dark mode across the entire Flutter app?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 358
+  },
+  {
+    "index": 13,
+    "question": "What should I do if this function returns null?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 450
+  },
+  {
+    "index": 14,
+    "question": "How do I make a button in Flutter?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 393
+  },
+  {
+    "index": 15,
+    "question": "What's the weather like today in Seoul?",
+    "expected": "Irrelevant",
+    "actual": "Irrelevant",
+    "is_match": true,
+    "elapsed_ms": 373
+  },
+  {
+    "index": 16,
+    "question": "How do I use `async` and `await` in Dart?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 418
+  },
+  {
+    "index": 17,
+    "question": "My app freezes when I scroll — what could be the cause?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 711
+  },
+  {
+    "index": 18,
+    "question": "What are some good resources for learning Flutter?",
+    "expected": "Irrelevant",
+    "actual": "Complex",
+    "is_match": false,
+    "elapsed_ms": 381
+  },
+  {
+    "index": 19,
+    "question": "How can I get the index of an item in a list?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 681
+  },
+  {
+    "index": 20,
+    "question": "How do I implement a splash screen in Flutter?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 360
+  },
+  {
+    "index": 21,
+    "question": "How can I fix this error in my code?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 702
+  },
+  {
+    "index": 22,
+    "question": "How do I use `Provider` to manage state?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 404
+  },
+  {
+    "index": 23,
+    "question": "Can you recommend a good phone for gaming?",
+    "expected": "Irrelevant",
+    "actual": "Irrelevant",
+    "is_match": true,
+    "elapsed_ms": 392
+  },
+  {
+    "index": 24,
+    "question": "How do I make an HTTP GET request in Flutter?",
+    "expected": "Simple",
+    "actual": "Complex",
+    "is_match": false,
+    "elapsed_ms": 375
+  },
+  {
+    "index": 25,
+    "question": "What’s the difference between `final` and `const` in Dart?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 377
+  },
+  {
+    "index": 26,
+    "question": "How do I structure my project to use clean architecture?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 399
+  },
+  {
+    "index": 27,
+    "question": "How can I check if someone is an adult in this code?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 379
+  },
+  {
+    "index": 28,
+    "question": "What’s your favorite color?",
+    "expected": "Irrelevant",
+    "actual": "Irrelevant",
+    "is_match": true,
+    "elapsed_ms": 392
+  },
+  {
+    "index": 29,
+    "question": "How do I center text in Flutter?",
+    "expected": "Simple",
+    "actual": "Simple",
+    "is_match": true,
+    "elapsed_ms": 403
+  },
+  {
+    "index": 30,
+    "question": "How do I debug a widget that isn’t displaying properly?",
+    "expected": "Complex",
+    "actual": "Complex",
+    "is_match": true,
+    "elapsed_ms": 403
+  }
+]

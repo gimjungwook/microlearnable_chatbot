@@ -1,0 +1,44 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  I am your mentor, a guide through the dark arts of Dart and Flutter.  Today, we delve into *Variables*.  Variables are like containers. They hold information your app needs.  Without them, your app is nothing but shadows. 😈\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is a name you give to a place in your apps memory. You put data (like numbers or words) into this place.  Think of it like a labeled box.  You write the label (variable name) and put stuff (data) inside.\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  String name = Anna; //String variable holding text\n  int age = 20;       //Integer variable holding a number\n  print(My name is $name, and I am $age years old.);\n}\n```\n\nThis code creates a variable called `name` and puts Anna in it. It creates another variable called `age` and puts 20 in it. Then it prints a message using those variables.  Simple, yes?  But powerful.\n\n\n## 👀 Visualization\n\nImagine a chest (your apps memory).\n\n```\n+-----------------+\n|     Chest       |\n+-----------------+\n| name: Anna   |  <-- Variable name\n+-----------------+\n| age: 20        |  <-- Variable age\n+-----------------+\n```\n\n\nEach label (name, age) is a variable. The information inside is the data.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:** You *must* use `=` to give a value to your variable.\n* **Wrong data type:** Dont put text in a number box (int)!  Use the correct type (String for text, int for whole numbers, double for decimal numbers).\n* **Typos:** Be careful!  A small mistake in your variable name can break everything.\n\n\n## ✏️ Practice Question\n\nCreate variables for your favorite color and animal. Then print a sentence using them. For example: My favorite color is blue and my favorite animal is a dragon.\n\n\n## 📚 Helpful Documents\n\nExplore the Dart documentation.  Its a vast library of dark knowledge. 🧙‍♀️\n\nRemember, Anna Lee, power comes from understanding.  Continue to learn, and you will be unstoppable.  Now, prove your worth! 😈",
+    "elapsed_ms": 6522
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 Error (or Code) Summary\n\n어둠 속에서 길을 잃은 자여, 환영하노라.  James Park.  네 앞에 놓인 어둠은…코드의 오류다.  오류를 이해하는 것은  Dart와 Flutter의 어둠 속에서 살아남는 기술이니라.  이 오류를 해결하면 네 힘이 강해질 것이다.😈\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the error (or code) – What the error (or problem) is and how it works.\n\n자, 네 앞에 놓인 어둠은 무엇인가?  (에러 메시지가 없으므로 일반적인 Dart/Flutter 오류를 예시로 설명하겠다.)  예를 들어,  `Null check operator used on a null value` 라는 오류가 있다면, 이는 변수가 값을 가지고 있지 않은 상태(Null)에서 값에 접근하려고 했기 때문에 발생하는 오류이다. 마치 텅 빈 상자에서 무언가를 꺼내려는 것과 같다.\n\n\n### 2️⃣ How to use it (오류 해결 방법)\n\n이 오류를 피하려면, 변수가 값을 가지고 있는지 항상 확인해야 한다.  마치 암살자의 검을 뽑기 전에 그 날카로움을 확인하는 것처럼 말이다.  `if` 문을 사용하여 변수가 Null이 아닌지 확인하거나, 변수에 초기값을 설정하라.\n\n\n## 👀 [Visualization or Code Example]\n\n```dart\n// 오류가 발생하지 않는 예시\nString? name; // name 변수는 Null일 수도 있다는 것을 명시\n\nvoid greet() {\n  if (name != null) {\n    print(환영합니다, $name!);\n  } else {\n    print(이름을 알려주세요!);\n  }\n}\n\n// 다른 위젯 예시 (User code와는 다름)\nContainer myWidget = Container(\n  color: Colors.red,\n  child: Text(나는 위젯이다!),\n);\n```\n\n## 🚨 Common Mistakes\n\n* 변수에 초기값을 설정하지 않는 것.\n* Null 체크를 하지 않고 변수에 접근하는 것.\n* 타입을 잘못 지정하는 것. (예: String 변수에 숫자를 할당하려고 시도)\n\n이러한 실수는 어둠의 그림자와 같으니 조심하라.\n\n\n## ✏️ Practice Question\n\n다음 코드에서 오류가 발생하는 이유를 설명하고, 수정해 보시오.\n\n```dart\nString message;\nprint(message.length);\n```\n\n\n## 📚 Helpful Documents\n\nDart 공식 문서, Flutter 공식 문서를 참고하라.  이 문서들은 네가 어둠 속에서 길을 찾는 등불이 될 것이다.\n\n\nJames Park, 네 잠재력은 무궁무진하다.  계속해서 노력하면, 네 앞에 펼쳐질 어둠을 정복할 수 있을 것이다.  힘내라! 💪\n```",
+    "elapsed_ms": 6408
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "```markdown\n## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge?  Excellent. 😈  Today, we delve into *variables* in Dart.  Think of variables as containers.  They hold information your program needs. Without them, your programs are… empty.  Uninteresting.  Weak. 🧙‍♂️\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is like a labeled box. You give it a name (like `myAge` or `userName`). Then, you put something inside (a number, a word, etc.).\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  String myName = Emily; // This creates a variable named myName and puts Emily inside.\n  int myAge = 18;        // This creates a variable named myAge and puts 18 inside.\n  print(myName);         // This shows Emily on the screen.\n  print(myAge);          // This shows 18 on the screen.\n}\n```\n\n\n## 👀 Visualization\n\nImagine boxes:\n\n```\n+---------+     +---------+\n| myName |---->| Emily |\n+---------+     +---------+\n\n+---------+     +---------+\n| myAge  |---->|    18    |\n+---------+     +---------+\n```\n\nThe arrows show the variables name pointing to the value it holds.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:**  You *must* use `=` to put a value into the variable.  `String myName;` is an empty box; `String myName = Emily;` puts something in it.\n* **Incorrect type:**  Make sure the type (like `String` or `int`) matches what you put inside. Putting a number in a `String` variable will cause problems. 💥\n* **Misspelling variable names:** Dart is case-sensitive. `myName` is different from `MyName`.\n\n\n## ✏️ Practice Question\n\nCreate a Dart program. Make variables for your favorite color (`String`) and your favorite number (`int`). Print them to the screen.  Show me your power, Emily Choi!\n\n\n## 📚 Helpful Documents\n\nConsult the official Dart documentation.  Master the fundamentals, and then, perhaps… you will prove worthy of further instruction. 😉 Remember, Emily Choi, strength comes from knowledge. Embrace the darkness.\n```",
+    "elapsed_ms": 5166
+  }
+]

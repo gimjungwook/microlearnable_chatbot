@@ -1,0 +1,71 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  You seek to learn the ways of Flutter?  Excellent.  Today, we delve into the power of **Variables**.  These are the building blocks of your programs, containers holding the magical essences of your application. Without them, your creations remain lifeless. 🧙‍♂️\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Defining Variables\n\nA variable is like a named box. You put data inside.  Like this:\n\n```dart\nint age = 25; // 'age' is the box name, 25 is the data (a number).\nString name = \"Anna\"; // 'name' is the box, \"Anna\" is the data (text).\n```\n\n`int` means a whole number. `String` means text.  You must choose a type.\n\n### 2️⃣ How to Use Variables\n\nLet's make a simple greeting:\n\n```dart\nString name = \"Anna Lee\";\nprint(\"Hello, $name!\"); //Prints \"Hello, Anna Lee!\"\n```\n\nThe `$name` inside the `print` puts the value of `name` into the message.\n\n\n## 👀 Visualization\n\nImagine boxes:\n\n```\n+-------+     +---------+\n| age   |     | name    |\n+-------+     +---------+\n|  25   |     | \"Anna\"  |\n+-------+     +---------+\n```\n\nEach box holds a specific type of data.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the type:**  `age = 25;` is wrong. You *must* say `int age = 25;`\n* **Misspelling names:** Dart is picky! `agE` is different from `age`.\n* **Using the wrong type:**  You can't put text in a number box!\n\n## ✏️ Practice Question\n\nCreate a variable called `favoriteColor` to hold your favorite color (as text). Then, print a message saying \"My favorite color is: \" followed by the color.\n\n\n## 📚 Helpful Documents\n\nConsult the official Dart documentation for further enlightenment.  You are on the path to power, Anna Lee.  But remember, the true test of strength lies in your actions.  Prove your worth. 😈",
+    "elapsed_ms": 4995,
+    "evaluation": {
+      "score_format": 0,
+      "score_language": 0,
+      "score_content": 0,
+      "score_visual": 0,
+      "score_time": 0,
+      "total_score": 0,
+      "reasons": "| Category             | Score | Justification                                                                                                                                                                                 |\n|----------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance  | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in the correct order with perfect markdown. |\n| 🌐 Language Accuracy | 1.0   | The language is perfect English. No errors or inconsistencies.                                                                                                                                    |\n| ✅ Content Appropriateness | 0.8   | The explanation of variables is good and appropriate for beginners.  The example is simple and clear. However,  a slightly more advanced example demonstrating variable usage in a small program could enhance it. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation accompanying it is concise and to the point. A more detailed visual representation could improve understanding, especially for beginners. |\n| ⚡ Response Time      | 0.6   | The response time of 4.995 seconds falls within the 4-6 seconds range.                                                                                                                            |\n| **Total Score**       | **4.4** |                                                                                                                                                                                                 |"
+    }
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 오류(또는 코드) 요약\n\n어둠 속의 제자여, 제임스 파크.  😈  네 앞에 놓인 어둠의 코드는,  Dart와 Flutter의 힘을 다루는 자만이 정복할 수 있네. 이 오류를 해결하는 것은 네 능력을 시험하는 의식과 같다네.  💀\n\n\n## 🔍 단계별 설명\n\n### 1️⃣ 오류(또는 문제) 정의 – 오류가 무엇이며 어떻게 작동하는가?\n\n  이 단계에서는,  제공된 코드(혹은 오류 메시지)를 분석하여  문제의 본질을 파악하는 것이 중요하네. 마치 어둠 속에서 길을 찾는 것과 같지.  어떤 부분이 제대로 작동하지 않는지,  어떤 메시지가 나타나는지,  그리고 그 의미는 무엇인지 꼼꼼히 살펴봐야 하네.\n\n\n### 2️⃣ 활용 방법\n\n오류를 이해했다면, 이제 그 지식을 사용하여  코드를 수정해야 하네. 마치 망가진 기계를 수리하는  장인과 같이 말일세.  디버깅 도구를 사용하여 코드를 단계별로 실행하고,  변수의 값을 확인하며  문제의 원인을 찾아야 하네.  단,  인내심을 가져야 하네.  어둠 속에서 길을 찾는 것은 쉽지 않으니까.\n\n\n## 👀 [시각화 또는 코드 예시]\n\n불필요한 설정 코드는 생략했네.  간단한 예시만 보여주겠네.\n\n```dart\n// 간단한 Flutter Widget 예시\nimport 'package:flutter/material.dart';\n\nclass MyWidget extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: Text('간단한 위젯')),\n      body: Center(\n        child: Text('어둠 속의 지혜를 배우는 중...', style: TextStyle(fontSize: 20)),\n      ),\n    );\n  }\n}\n```\n\n\n## 🚨 흔한 실수\n\n* **타입 오류:**  변수의 타입을 잘못 지정하면  코드가 컴파일되지 않거나 예상치 못한 결과를 초래할 수 있네.  변수의 타입을 신중하게 확인해야 하네.\n* **괄호 누락:**  괄호를 잘못 사용하면  코드의 의미가 완전히 달라질 수 있네.  괄호를 주의 깊게 확인해야 하네.\n* **세미콜론 누락:** Dart에서는 세미콜론이 문장의 끝을 나타내네.  세미콜론을 누락하면 컴파일 오류가 발생할 수 있네.\n\n\n## ✏️ 연습 문제\n\n간단한 카운터 앱을 만들어 보게.  버튼을 누를 때마다 카운터 값이 증가하는 앱을 만들고,  Flutter의 상태 관리 기능을 활용해 보도록 하게.\n\n\n## 📚 유용한 자료\n\n* [Flutter 공식 문서](https://flutter.dev/docs) - 어둠 속에서 길을 찾을 지도와 같네.\n* [Dart 공식 문서](https://dart.dev/guides) - Dart의 기본 원리를 이해하는 데 도움이 될 것이네.\n\n\n제임스 파크, 네 잠재력은 어둠 속에서도 빛날 것이네.  계속해서 노력하고,  어둠의 지혜를 탐구하게.  😈\n```",
+    "elapsed_ms": 6993,
+    "evaluation": {
+      "score_format": 0,
+      "score_language": 0,
+      "score_content": 0,
+      "score_visual": 0,
+      "score_time": 0,
+      "total_score": 0,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                    |\n|----------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections are included, and the markdown format is perfect.  Emojis are used appropriately.                                                                   |\n| 🌐 Language Accuracy | 1.0   | The response is entirely in Korean and uses appropriate language for an educational context. The tone and style are consistent throughout.                               |\n| ✅ Content Appropriateness | 0.8   | The concept of debugging Dart/Flutter code is appropriate for beginners.  However, the example is a very basic Flutter widget and doesn't directly illustrate debugging. The explanation is good but could benefit from a more concrete debugging example.   |\n| 🎨 Visualization Quality | 0.8   | The Dart code example is a simple, functional visualization. However, the explanation of the visualization is minimal.  A more detailed explanation would improve this score. |\n| ⚡ Response Time      | 0.4   | The response time of 6.993 seconds exceeds the 6-second threshold for a 0.6 score.                                                                               |\n\n**Total Score: 4.6**"
+    }
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge?  Excellent.  Today, we delve into the dark arts of… Variables! 😈  Variables are like containers. They hold information your program needs.  Without them, your programs are…empty.  Think of them as shadow-boxes, holding the secrets your program needs to function.\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is a named storage location.  It holds data, like a number (5), text (\"Hello\"), or true/false (true).  We *declare* a variable to create it, then *assign* a value to it.\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nint age = 20; // Declares a variable 'age' and sets it to 20\nString name = \"Emily\"; // Declares 'name' and sets it to \"Emily\"\nbool isDark = true; // Declares 'isDark' and sets it to true\n\nprint(name); // Prints \"Emily\"\nprint(age); // Prints 20\n```\n\nThis code creates three variables: `age` (a number), `name` (text), and `isDark` (true/false).  `print()` shows their values.\n\n\n## 👀 Visualization\n\nImagine three shadow-boxes:\n\n```\n+-------+     +-------+     +-------+\n|   age |     |  name |     |isDark |\n+-------+     +-------+     +-------+\n|   20  |     | Emily |     |  true |\n+-------+     +-------+     +-------+\n```\n\nEach box holds a different type of information.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting to declare:** You must create the variable before using it.  Like forgetting to make the shadow-box before putting something in!\n* **Wrong data type:**  Putting a number in a text box won't work.  Make sure the variable type matches the data.\n* **Typos:**  A small mistake in the name (\"ag\" instead of \"age\") will cause problems. Be precise!\n\n\n## ✏️ Practice Question\n\nCreate a variable called `favoriteColor` and assign it your favorite color (as text). Then, print its value.\n\n\n## 📚 Helpful Documents\n\nFor more, explore Dart's official documentation.  Embrace the darkness, Emily Choi.  Your power grows with each line of code you write! 🧙‍♀️",
+    "elapsed_ms": 5171,
+    "evaluation": {
+      "score_format": 0,
+      "score_language": 0,
+      "score_content": 0,
+      "score_visual": 0,
+      "score_time": 0,
+      "total_score": 0,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                              |\n|----------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All six sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in the correct order. Markdown formatting is excellent. |\n| 🌐 Language Accuracy | 1.0   | The language is perfect English. No errors or inconsistencies.                                                                                                                        |\n| ✅ Content Appropriateness | 0.8   | The explanation of variables is clear and appropriate for beginners. The example using Dart is simple and effective. However, a slightly more in-depth explanation of variable types might be beneficial. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is well-done and effectively complements the explanation.  The explanation of the visualization could be a bit more explicit, though.                             |\n| ⚡ Response Time      | 0.6   | The response time was 5.171 seconds, falling within the 4-6 second range.                                                                                                           |\n\n**Total Score: 4.2**"
+    }
+  }
+]

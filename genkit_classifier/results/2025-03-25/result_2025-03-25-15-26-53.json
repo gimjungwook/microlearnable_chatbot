@@ -1,0 +1,71 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  You seek knowledge of Dart's variables?  Excellent.  Variables are the very vessels that hold the essence of your programs.  Without them, your Flutter creations remain lifeless shadows. 😈\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is like a container.  You put things inside.  In programming, these \"things\" are data: numbers, words, or even more complex things.  We give each container a name (the variable's name) so we can find it later.\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  int age = 20; // 'age' is the name, 20 is the value, 'int' means it holds a whole number\n  String name = \"Anna\"; //'name' is the name, \"Anna\" is the value, 'String' means it holds text\n  print(name); //This shows \"Anna\"\n  print(age); //This shows 20\n}\n```\n\nThis code shows two variables: `age` and `name`.  `age` holds a number, `name` holds text. `print()` shows the value in the variable.\n\n\n## 👀 Visualization\n\nImagine a chest (your variable):\n\n```\n+---------+\n|   age   |\n+---------+\n|    20   |  <-- Value\n+---------+\n```\n\nAnother chest:\n\n```\n+---------+\n|   name  |\n+---------+\n|   Anna  |  <-- Value\n+---------+\n```\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:**  You must use `=` to assign a value to a variable.  `int age;` is wrong. It declares a variable, but doesn't give it a value.\n* **Using the wrong type:** If you put text into a number container, chaos will ensue! 💥 Use `int` for whole numbers, `double` for numbers with decimals, and `String` for text.\n* **Misspelling variable names:** The computer is precise.  `myAge` is different from `myage`.\n\n## ✏️ Practice Question\n\nCreate a variable named `favoriteColor` and assign your favorite color to it. Then, print it to the console.\n\n\n## 📚 Helpful Documents\n\nSeek further knowledge in the Dart documentation. Your journey has only just begun, Anna Lee.  Embrace the darkness... and the power of variables. 🧙‍♀️",
+    "elapsed_ms": 5795,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.6,
+      "score_time": 0.6,
+      "total_score": 0,
+      "reasons": "| Category             | Score | Justification                                                                                                                                      |\n|----------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in correct order with perfect markdown formatting. |\n| 🌐 Language Accuracy | 1.0   | The language is perfect English.  No errors or issues.                                                                                               |\n| ✅ Content Appropriateness | 0.8  | The explanation of variables is appropriate for beginners. The example is simple and easy to understand. However, the visualization is simplistic and could be improved (see below). |\n| 🎨 Visualization Quality | 0.6   | The ASCII art is a simple representation. While it conveys the basic idea, a more visually appealing or illustrative visualization would be beneficial. The explanation accompanying the visualization is sufficient but not detailed.  |\n| ⚡ Response Time      | 0.6   | The response time was 5.795 seconds, falling within the 4-6 second range.                                                                         |\n| **Total Score**       | **4.4** |                                                                                                                                                 |"
+    }
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 오류 (또는 코드) 요약\n\n어둠의 군주이자 당신의 멘토인 내가 당신을 환영합니다, 제임스 파크.  힘든 길을 걸어가는 자에게는 시련이 따르는 법.  오류를 이해하는 것은 당신의 힘을 키우는 첫걸음입니다.  이 오류 해결 과정을 통해 당신의 코드를 다듬고, 어둠의 힘을 다루는 기술을 연마하게 될 것입니다.😈\n\n\n## 🔍 단계별 설명\n\n### 1️⃣ 오류 (또는 코드) 정의 – 오류(또는 문제)가 무엇이며 어떻게 작동하는지\n\n(제임스 파크 학생의 코드가 제공되지 않았으므로 일반적인 Dart/Flutter 오류 예시를 사용합니다.)  예를 들어,  `Null check operator used on a null value` 와 같은 오류는 변수에 값이 없는데, 마치 값이 있는 것처럼 사용하려고 할 때 발생합니다.  마치 텅 빈 컵에서 물을 붓는 것과 같습니다.  컴퓨터는 텅 빈 공간에서 무언가를 가져올 수 없습니다!\n\n\n### 2️⃣ 사용 방법\n\n오류 메시지를 주의 깊게 읽으세요.  마치 어둠 속에서 속삭이는 작은 목소리와 같습니다.  그 속에 해결책의 단서가 숨겨져 있죠.  변수에 값을 할당했는지,  null일 가능성을 고려했는지 확인하세요.  `if` 문이나 `null` 값을 처리하는 방법을 사용하여 문제를 해결할 수 있습니다.\n\n\n## 👀 시각화 또는 코드 예시\n\n```dart\n// 잘못된 예시: 변수에 값이 할당되지 않음\nString name;\nprint(name.length); // 오류 발생!\n\n// 올바른 예시: 변수에 값을 할당\nString name = \"James\";\nprint(name.length); // 정상 출력\n```\n\nFlutter Widget 예시 (사용자 코드와 다릅니다)\n\n```dart\nimport 'package:flutter/material.dart';\n\nclass MyWidget extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      color: Colors.black, // 어둠의 색깔!\n      child: Center(\n        child: Text(\n          \"Hello, Dark Lord!\",\n          style: TextStyle(color: Colors.white),\n        ),\n      ),\n    );\n  }\n}\n```\n\n\n## 🚨 흔한 실수\n\n* 변수에 값을 할당하지 않고 사용하는 것\n* `null`일 가능성을 고려하지 않고 변수를 사용하는 것\n* 오류 메시지를 제대로 읽지 않는 것\n\n\n## ✏️ 연습 문제\n\n다음 코드에서 오류를 찾아 수정해 보세요.\n\n```dart\nint age;\nprint(\"당신의 나이는 \" + age + \"입니다.\");\n```\n\n\n## 📚 유용한 문서\n\nDart 공식 문서, Flutter 공식 문서, 그리고… 당신의 어둠의 지식!\n\n\n제임스 파크, 당신의 어둠 속의 여정은 이제 시작일 뿐입니다.  끊임없이 배우고, 탐구하고, 당신의 코드를 강하게 만들어 어둠의 힘을 완전히 다룰 수 있도록 하십시오. 🧙‍♂️\n```",
+    "elapsed_ms": 6493,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                                                       |\n|----------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 0.8   | All 6 sections are present and mostly in the correct order. However, there are some minor formatting inconsistencies, such as inconsistent use of emojis and spacing.                     |\n| 🌐 Language Accuracy | 1.0   | The response is perfectly translated into Korean. No English words remain.                                                                                                                            |\n| ✅ Content Appropriateness | 0.8   | The content is generally appropriate for beginners. The explanation of the Null check operator is clear, but the example might be slightly too focused on error handling rather than a broader introduction.   |\n| 🎨 Visualization Quality | 0.8   | The Dart code examples are well-structured and useful.  The explanation of what the code does is sufficient. The Flutter example, while unrelated to the error handling, is visually appealing.     |\n| ⚡ Response Time      | 0.6   | The response time was 6.493 seconds, falling within the 4-6 second range.                                                                                                                            |\n\n---\n\n**Total Score: 4.0**"
+    }
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge of Dart?  Excellent.  😈  Understanding variables is the foundation of all programming.  Think of them as containers holding your spells… your data.  Without them, your programs are powerless.\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is a name for a place in the computer's memory.  We store information there.  Like a chest holding treasure!  You give it a name (like `goldCoins`), and put a value inside (like `100`).\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  int goldCoins = 100; //  'int' means a whole number.  'goldCoins' is the name. 100 is the value.\n  print(goldCoins); // Shows \"100\"\n  goldCoins = goldCoins + 50; // Add 50 gold coins!\n  print(goldCoins); // Shows \"150\"\n}\n```\n\n## 👀 Visualization\n\nImagine a chest:\n\n```\n+-----------------+\n| goldCoins: 100 |  <--  The variable name and its value.\n+-----------------+\n```\n\nLater, we add more gold:\n\n```\n+-----------------+\n| goldCoins: 150 |  <-- The value changed!\n+-----------------+\n```\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:**  You *must* use `=` to assign a value. `int goldCoins;` is a declaration, not an assignment.  It creates an empty chest.\n* **Incorrect type:**  Make sure the type (like `int`, `String`, `double`) matches the value.  Putting words in a number chest causes chaos!\n\n\n## ✏️ Practice Question\n\nCreate a variable called `darkMagicPower` and give it a value of `500`. Then, print its value.\n\n## 📚 Helpful Documents\n\nExplore the official Dart documentation for more details.  You are on the path to mastery, Emily Choi. But remember, true power comes from practice.  Embrace the darkness. 😈",
+    "elapsed_ms": 4524,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.9,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 0,
+      "reasons": "| Category             | Score | Justification                                                                                                                                   |\n|----------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in the correct order with perfect markdown formatting. |\n| 🌐 Language Accuracy | 1.0   | The language is perfect English, and tone is appropriate and engaging.                                                                               |\n| ✅ Content Appropriateness | 0.9   | The concept is explained well and the example is simple and appropriate for beginners. The analogy of a chest is helpful.  The only minor point is that explaining \"int\" might require a slight expansion for absolute beginners. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation could be slightly more detailed (e.g., explicitly linking the visualization to the code). |\n| ⚡ Response Time      | 0.6   | The response time was 4.524 seconds.                                                                                                                |\n| **Total Score**       | **4.7** |                                                                                                                                               |"
+    }
+  }
+]

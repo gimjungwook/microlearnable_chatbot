@@ -1,0 +1,31 @@
+index,question,expected,actual,is_match,elapsed_ms
+1,"How do I use a `ListView.builder` in Flutter?",Simple,Simple,true,964
+2,"Why is my widget not rebuilding after setState?",Complex,Complex,true,457
+3,"What does the `late` keyword mean in Dart?",Simple,Simple,true,445
+4,"How can I fix an error saying ""type 'Null' is not a subtype of type 'String'""?",Complex,Complex,true,457
+5,"Can you explain how to use `Navigator.push`?",Simple,Simple,true,492
+6,"What’s the best architecture for a scalable Flutter app?",Complex,Complex,true,576
+7,"How do I add two numbers in Dart?",Simple,Simple,true,526
+8,"How do I check if a user is logged in using Firebase in Flutter?",Complex,Complex,true,638
+9,"Why do I get a null pointer exception when accessing this variable?",Complex,Complex,true,495
+10,"What is Flutter?",Simple,Simple,true,599
+11,"How do I convert a `String` to `int` in Dart?",Simple,Simple,true,426
+12,"How can I implement dark mode across the entire Flutter app?",Complex,Complex,true,421
+13,"What should I do if this function returns null?",Complex,Complex,true,698
+14,"How do I make a button in Flutter?",Simple,Simple,true,464
+15,"What's the weather like today in Seoul?",Irrelevant,Irrelevant,true,482
+16,"How do I use `async` and `await` in Dart?",Simple,Simple,true,470
+17,"My app freezes when I scroll — what could be the cause?",Complex,Complex,true,652
+18,"What are some good resources for learning Flutter?",Irrelevant,Complex,false,477
+19,"How can I get the index of an item in a list?",Simple,Simple,true,440
+20,"How do I implement a splash screen in Flutter?",Complex,Complex,true,430
+21,"How can I fix this error in my code?",Complex,Complex,true,431
+22,"How do I use `Provider` to manage state?",Complex,Complex,true,423
+23,"Can you recommend a good phone for gaming?",Irrelevant,Irrelevant,true,420
+24,"How do I make an HTTP GET request in Flutter?",Simple,Complex,false,654
+25,"What’s the difference between `final` and `const` in Dart?",Simple,Simple,true,422
+26,"How do I structure my project to use clean architecture?",Complex,Complex,true,662
+27,"How can I check if someone is an adult in this code?",Complex,Complex,true,431
+28,"What’s your favorite color?",Irrelevant,Irrelevant,true,444
+29,"How do I center text in Flutter?",Simple,Simple,true,463
+30,"How do I debug a widget that isn’t displaying properly?",Complex,Complex,true,627
