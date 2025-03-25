@@ -13,11 +13,11 @@ microlearnable/
 └── genkit_classifier/      # 현재 프로젝트 (질문 분류기)
     ├── results/            # 결과 저장 폴더
     ├── example.csv         # 테스트용 입력 CSV
-    └── index.ts            # 메인 실행 파일 (TypeScript)
+    └── mass_classifier.ts            # 메인 실행 파일 (TypeScript)
 ```
 
 > 이후 이 프로젝트는 `Flutter + Firebase Functions` 기반의 웹 프로젝트와 통합될 예정입니다.  
-> 통합 프로젝트는 `microlearnable/flutter_frontend` 디렉토리에 위치하게 됩니다.
+> 통합 프로젝트는 `microlearnable/chatbot_demo` 디렉토리에 위치하게 됩니다.
 
 ---
 
