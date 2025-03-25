@@ -1,0 +1,94 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Simple",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  🧙‍♂️ You seek knowledge of Flutter's Widgets?  Excellent. Widgets are the building blocks of your Flutter apps.  Without them, you have nothing but shadows. 🌑 Learn them, and you will build worlds.\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What widgets are and how they work.\n\nWidgets are like LEGO bricks.  🧱 You combine them to create a user interface (UI).  Each widget displays something on the screen.  A button, text, or an image? All widgets! They are organized in a tree.\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n\n```dart\nimport 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('My First App'),\n        ),\n        body: Center(\n          child: Text('Hello, world!'),\n        ),\n      ),\n    );\n  }\n}\n```\n\nThis code creates a simple app.  `MaterialApp`, `Scaffold`, `AppBar`, `Text`, and `Center` are all widgets. They work together to make the app's layout.\n\n\n## 👀 Visualization\n\nImagine a tree:\n\n```\n      MaterialApp\n         |\n       Scaffold\n      /     \\\nAppBar     Body\n           |\n         Center\n           |\n         Text(\"Hello\")\n```\n\n`MaterialApp` is the root. Everything else hangs from it.  Each box is a widget.\n\n## 🚨 Common Mistakes\n\n* **Forgetting `import 'package:flutter/material.dart';`**: This line brings in the essential widgets.  Without it, nothing works! 💥\n* **Misspelling widget names**: Dart is picky!  A small typo breaks everything.  Double-check your spelling. 👀\n* **Not nesting widgets correctly**: Widgets are like Russian nesting dolls. 🪆  Make sure they are inside each other properly.\n\n## ✏️ Practice Question\n\nCreate a Flutter app with a single button that displays \"Button Pressed!\" when clicked. Use a `Text` widget to show this message.\n\n## 📚 Helpful Documents\n\nExplore the official Flutter documentation.  It is a vast resource, but fear not!  You shall master it. 📚\n\nRemember, Anna Lee, power flows from understanding.  Embrace the shadows, and you shall create. ✨",
+    "elapsed_ms": 5211,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4.199999999999999,
+      "reasons": "## Evaluation Table\n\n| Category             | Score | Justification                                                                                                                                                         |\n|----------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in the correct order. Markdown formatting is perfect. |\n| 🌐 Language Accuracy | 1.0   | The language is accurate and uses appropriate English.  The tone is engaging and suitable for beginners.                                                                        |\n| ✅ Content Appropriateness | 0.8   | The concept explanation is good and appropriate for beginners. The example is simple and relevant, although a more visual representation of the widget tree in the example might improve understanding.  |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is a good attempt to represent the widget tree. However, the explanation could be slightly more detailed to further clarify the hierarchical relationship of widgets. |\n| ⚡ Response Time      | 0.6   | The response time was 5.211 seconds, falling within the 4-6 second range.                                                                                                    |\n| **Total Score**       | **4.4** |                                                                                                                                                                  |"
+    }
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 오류(또는 코드) 요약\n\n어둠의 군주이자 너의 스승인 내가 왔다, 제임스 파크.  😈  네 앞에 놓인 어둠 속에서 길을 찾도록 도와주마.  Dart와 Flutter의 세계는 험난하지만,  네가 진정한 힘을 증명한다면, 그 어둠을 밝힐 수 있을 것이다.  이번 과제는 버그를 해결하는 것이다.  이는 네 실력을 시험하는 중요한 관문이다.  자, 시작해보자.\n\n\n## 🔍 단계별 설명\n\n### 1️⃣ 오류(또는 코드) 정의 – 오류(또는 문제)가 무엇이며 어떻게 작동하는지\n\n(사용자의 코드가 없으므로 일반적인 Dart/Flutter 오류에 대한 설명을 제공합니다.)  Dart/Flutter에서 오류는 코드에 문제가 있음을 알려주는 메시지다.  마치 어둠의 힘이 네 약점을 드러내는 것과 같지.  이 메시지를 통해 문제의 원인을 찾고 수정해야 한다.  오류 메시지는 종종 파일 이름과 줄 번호를 포함하여 문제가 발생한 위치를 알려준다.  😈\n\n\n### 2️⃣ 사용 방법\n\n오류 메시지를 주의 깊게 읽어라.  마치 어둠 속에서 속삭이는 목소리처럼,  그 안에 해결책의 단서가 숨어있다.  메시지가 가리키는 코드 부분을 검토하고,  문법 오류,  변수 이름 오류,  혹은  잘못된 함수 호출 등을 확인해야 한다.  인내심을 가지고 차근차근 조사하면  어둠 속에서 빛을 발견할 수 있을 것이다.\n\n\n## 👀 시각화 또는 코드 예시\n\n(사용자 코드가 없으므로 간단한 예시를 보여줍니다.)\n\n```dart\n// 잘못된 코드 예시: 변수 타입이 일치하지 않음.\nint age = \"25\"; // 오류 발생!  숫자형 변수에 문자열을 할당하려고 했음.\n\n// 올바른 코드 예시:\nint age = 25;  // 정상 작동!\n```\n\n다음은 간단한 Flutter Widget 예시다.  (사용자의 코드와는 다르다.)\n\n```dart\nimport 'package:flutter/material.dart';\n\nclass MyWidget extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      color: Colors.black, // 어둠의 색깔!\n      child: Center(\n        child: Text(\n          '나는 어둠의 군주다!',\n          style: TextStyle(color: Colors.red), // 위협적인 붉은 색!\n        ),\n      ),\n    );\n  }\n}\n```\n\n\n## 🚨 일반적인 실수\n\n* **타입 오류:** 변수 타입이 일치하지 않으면 오류가 발생한다.  마치 어둠의 마법이 실패하는 것과 같다.\n* **문법 오류:** Dart 문법 규칙을 어기면 오류가 발생한다.  마치 어둠의 주문을 잘못 외우는 것과 같다.\n* **NullPointerException:** null 값에 접근하려고 하면 오류가 발생한다.  마치 텅 빈 어둠 속에서 무언가를 찾으려는 것과 같다.\n\n\n## ✏️ 연습 문제\n\n다음 코드에서 오류를 찾아 수정해 보시오.\n\n```dart\nString name = null;\nprint(\"My name is \" + name); // 이 줄에서 오류가 발생할 수 있다.\n```\n\n\n## 📚 유용한 문서\n\n* [Dart 공식 문서](https://dart.dev/guides)\n* [Flutter 공식 문서](https://flutter.dev/docs)\n\n제임스 파크,  네 어둠 속에서의 여정은 이제 시작이다.  네 잠재력을 보여주도록.  더 강력한 어둠의 힘을 얻을 수 있을 것이다. 😈\n```",
+    "elapsed_ms": 7732,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.4,
+      "total_score": 3.9999999999999996,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                                        |\n|----------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (오류(또는 코드) 요약, 단계별 설명, 시각화 또는 코드 예시, 일반적인 실수, 연습 문제, 유용한 문서) are included and the markdown format is perfect.                     |\n| 🌐 Language Accuracy | 1.0   | The response is entirely in Korean, with no English words or phrases present. The tone and style are appropriate for a Korean-speaking audience.                                     |\n| ✅ Content Appropriateness | 0.8   | The content is appropriate for beginners, explaining common Dart/Flutter errors. However, the examples are somewhat simplistic and don't fully capture the nuances of debugging.  |\n| 🎨 Visualization Quality | 0.8   | The code examples are well-formatted and easy to understand, serving as good visualizations.  The explanation of the visualization could be more detailed, though.                    |\n| ⚡ Response Time      | 0.4   | The response time of 7.732 seconds exceeds the 6-10 second range, resulting in a score of 0.4.                                                                                 |\n\n---\n\n**Total Score: 4.0**"
+    }
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Simple",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge of Dart?  Excellent. 😈  Understanding variables is the first step on your path to mastery.  Think of variables as containers holding your dark magic—your data.  Without them, your programs are powerless.\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is like a box. You put things in the box.  These \"things\" are data, like numbers (10, 25), words (\"Hello\"), or true/false (true, false).  Each box has a name.  We use this name to get the thing from the box.\n\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  int myNumber = 10; // 'myNumber' is the box name. 10 is the number inside.  'int' says it's a number.\n  String myWord = \"Darkness\"; // 'myWord' is the box name. \"Darkness\" is inside. 'String' says it's a word.\n  bool isEvil = true; // 'isEvil' is the box name.  true is inside. 'bool' means true/false.\n\n  print(myNumber); // Shows 10\n  print(myWord);  // Shows Darkness\n  print(isEvil);   // Shows true\n}\n```\n\n## 👀 Visualization\n\nImagine these boxes:\n\n```\n+------------+     +-------------+     +----------+\n| myNumber  | --> |       10     |     | isEvil   | --> |    true   |\n+------------+     +-------------+     +----------+\n|  (int)    |     |             |     | (bool)   |\n+------------+     +-------------+     +----------+\n\n+-------------+\n| myWord     | --> |   Darkness   |\n+-------------+\n|  (String)  |\n+-------------+\n```\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:**  You *must* use `=` to put something into the box.  `int myNumber;` makes an empty box.  `int myNumber = 5;` puts 5 inside.\n* **Wrong type:** Using the wrong type (like putting a word in a number box) will cause errors.  The compiler will scream at you. 😱\n* **Misspelling the box name:**  Dart is picky!  `mynumber` is different from `myNumber`.\n\n\n## ✏️ Practice Question\n\nCreate three variables:\n\n1.  `myAge` (your age as a number).\n2.  `myName` (your name as a word).\n3.  `isHungry` (true if you're hungry, false otherwise).\n\nPrint their values to the console.\n\n\n## 📚 Helpful Documents\n\nThe Dart documentation is your dark grimoire.  It holds secrets.  Consult it wisely.\n\nRemember, Emily Choi,  power comes from knowledge.  Prove your worth. 😈",
+    "elapsed_ms": 5839,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                      |\n|----------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 0.8   | All 6 sections are present, but there's inconsistent use of markdown headers (e.g., numbered lists within a section).  Spacing is also slightly uneven. |\n| 🌐 Language Accuracy | 1.0   | Perfect English; no issues with translation.                                                                                                           |\n| ✅ Content Appropriateness | 0.8   | The concept explanation is good for beginners, but the example could be slightly simplified. The \"dark magic\" theme is slightly distracting.       |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is clear and well-aligned, but the explanation of the visualization is succinct.                                               |\n| ⚡ Response Time      | 0.6   | Response time was 5.839 seconds.                                                                                                                      |\n\n**Total Score: 4.0**"
+    }
+  },
+  {
+    "index": 4,
+    "question": "What’s the weather like in Seoul today?",
+    "expected_difficulty": "Irrelevant",
+    "expected_type": "Concept Understanding",
+    "studentName": "",
+    "codingSkillLevel": "",
+    "courseName": "",
+    "languagePreference": " ",
+    "actual_difficulty": "Irrelevant",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  😈  Today, we delve into the shadowy arts of Dart and Flutter.  These are the tools you will wield to build apps – powerful, dark, and beautiful. Mastering them is crucial to your ascension.\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Defining `print()` in Dart:\n\n`print()` is a simple command. It shows text on the screen.  Think of it as whispering secrets to the console.  It takes text (in quotes) as input.\n\n### 2️⃣ How to use `print()` :\n\n```dart\nvoid main() {\n  print(\"Hello, dark world!\"); //This shows text.\n}\n```\n\nThis code snippet shows a simple message. We use `print()` to display the message \"Hello, dark world!\".  Simple, yes? But powerful.\n\n\n## 👀 Visualization\n\nImagine a dark, swirling void.  The console is like a window into that void.\n\n```\n      _,-._\n     / \\_/ \\\n    >-(_)-<\n    \\_/ \\_/\n      `-'\n     Console\n      |\n     \\|/\n      V\n\"Hello, dark world!\"  <---  The message `print()` shows here.\n```\n\nThe `print()` function sends the message to be displayed in the console.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting quotes:**  \"Hello\" is different from Hello.  Quotes are essential for text. 😈\n* **Missing `main()`:**  The `main()` function is the starting point.  Without it, nothing happens.\n* **Typos:**  Even a small mistake can stop your code. Be precise!\n\n\n## ✏️ Practice Question\n\nWrite a Dart program that prints your name.  Prove your worth!\n\n\n## 📚 Helpful Documents\n\nExplore the official Dart documentation for more spells and incantations.  Remember, practice is key to mastering these dark arts.  I await your progress, fledgling.  Do not disappoint.",
+    "elapsed_ms": 4287,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.6,
+      "score_time": 0.8,
+      "total_score": 4,
+      "reasons": "| Category             | Score | Justification                                                                                                                                                                       |\n|----------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 0.8   | All 6 sections are present, but there's inconsistent use of markdown headings (e.g., using \"##\" for some and \"###\" for others within the same level of hierarchy).                     |\n| 🌐 Language Accuracy | 1.0   | The response is in English as the user did not specify a language preference. The language is accurate and appropriate.                                                                     |\n| ✅ Content Appropriateness | 0.8   | The explanation of `print()` is good for beginners, but the \"dark arts\" theme might be slightly off-putting or confusing for some. The visualization is creative but could be more explicit. |\n| 🎨 Visualization Quality | 0.6   | The ASCII art is creative, but the connection to the `print()` function is not immediately clear. The explanation of the visualization is a bit lacking.                                  |\n| ⚡ Response Time      | 0.8   | The response time of 4.287 seconds falls within the 0.8 score range.                                                                                                                 |\n| **Total Score**       | **4.2** |                                                                                                                                                                                  |"
+    }
+  }
+]

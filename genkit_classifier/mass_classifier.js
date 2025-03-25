@@ -207,10 +207,44 @@ function processQuestions(csvPath) {
         for (let i = 0; i < inputs.length; i++) {
             const input = inputs[i];
             const start = performance.now();
-            const difficultyPrompt = `Categorize the question into one of the following: \"Simple\", \"Complex\", or \"Irrelevant\".\nQuestion: \"${input.question}\"`;
+            const difficultyPrompt = `{
+  "persona": "You are a classifier that categorizes a user's question."
+  "task": "categorizes a user's question into one of the following three categories based on content and context:
+
+1. 'Simple': The question is related to Flutter or Dart and asks for a short explanation, usage, or syntax. It can be answered in 1-2 sentences.
+2. 'Complex': The question is related to Flutter or Dart, but involves debugging, code logic, architectural understanding, or multi-step reasoning.
+3. 'Irrelevant': The question is not related to Flutter or Dart at all.
+
+Pay special attention to questions that may not include the words 'Flutter' or 'Dart' directly, but are clearly asked in the context of writing or debugging code.
+
+Examples of contextually related but implicit questions:
+- 'What should I do if this function returns null?'
+- 'How can I check if someone is an adult in this code?'
+
+Your output must be one of: 'Simple', 'Complex', or 'Irrelevant'. Do not explain your reasoning. Do not include any extra text.",
+  "input_format": "${input.question}",
+  "output_format": "'Simple', 'Complex', or 'Irrelevant'"
+}`;
             const typePrompt = `Classify the question into one of the following categories: \"Concept Understanding\" or \"Debugging/Error Fixing\".\nQuestion: \"${input.question}\"`;
             const actual_difficulty = yield classify(input.question, difficultyPrompt);
             const actual_type = yield classify(input.question, typePrompt);
+            // If actual difficulty is 'Irrelevant', return a custom message instead
+            if (actual_difficulty === 'Irrelevant') {
+                const result = Object.assign(Object.assign({ index: i + 1 }, input), { actual_difficulty,
+                    actual_type, answer: "This system is not designed to answer non-Dart/Flutter related questions. Please ask something related to Dart or Flutter.", elapsed_ms: Math.round(performance.now() - start), evaluation: {
+                        score_format: 0,
+                        score_language: 0,
+                        score_content: 0,
+                        score_visual: 0,
+                        score_time: 0,
+                        total_score: 0,
+                        reasons: "No evaluation for irrelevant question."
+                    } });
+                results.push(result);
+                fs_1.default.writeFileSync(partialPath, JSON.stringify(results, null, 2));
+                console.log(`${result.index}. ✅ Difficulty: ${actual_difficulty}, Type: ${actual_type}`);
+                continue; // Skip to the next question if the difficulty is 'Irrelevant'
+            }
             const systemPrompt = getSystemPrompt(actual_type, input);
             const answer = yield classify(input.question, systemPrompt);
             const end = performance.now();

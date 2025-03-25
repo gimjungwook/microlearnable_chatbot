@@ -1,0 +1,94 @@
+[
+  {
+    "index": 1,
+    "question": "How do I use `ListView.builder` in Flutter?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Anna Lee",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Flutter Bootcamp",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, fledgling.  I am your mentor, a guide through the dark arts of Dart and Flutter.  Today, we delve into **Variables**.  Variables are like containers. They hold information your program needs.  Without them, your apps will be as lifeless as a crypt! 😈\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is a named storage location. You give it a name, and it stores data (like a number, word, or true/false). Think of it like a chest holding treasure! 💰\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\nvoid main() {\n  String name = \"Anna\"; // This creates a variable named 'name' and puts \"Anna\" inside.\n  int age = 20; // This variable 'age' holds the number 20.\n\n  print(\"My name is $name and I am $age years old.\"); // This shows the values.\n}\n```\n\n## 👀 Visualization\n\nImagine a chest (variable):\n\n```\n+---------+\n|  name   | --> \"Anna\"\n+---------+\n\n+---------+\n|   age   | --> 20\n+---------+\n```\n\nThe variable `name` holds the text \"Anna\". The variable `age` holds the number 20.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:**  You *must* use `=` to give a variable its value.  `String name;` is empty, like an empty chest.  `String name = \"Anna\";` is full.\n* **Wrong Data Type:**  Don't put a number in a text variable!  It's like trying to fit a sword into a goblet. ⚔️🍷\n\n## ✏️ Practice Question\n\nCreate a variable called `city` and store your city's name in it.  Then, print a sentence like: \"I live in [city name]\".\n\n## 📚 Helpful Documents\n\nSeek more knowledge from the official Dart documentation.  Mastering this will bring you closer to true power! 🧙‍♀️\n\nRemember, Anna Lee, the path of a Flutter developer is paved with challenges.  But with enough dedication, you will prevail.  Prove your worth!",
+    "elapsed_ms": 5010,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 1,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4.3999999999999995,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                        |\n|----------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in the correct order. Markdown formatting is perfect. |\n| 🌐 Language Accuracy | 1.0   | The language is accurate and appropriate for the target audience.  The use of emojis enhances the explanation effectively.                 |\n| ✅ Content Appropriateness | 1.0   | The concept of variables is explained clearly and concisely, suitable for beginners. The example code is simple and easy to understand. The analogies used (chest, sword/goblet) are effective. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation could be slightly more detailed, explaining how the visualization relates to the code. |\n| ⚡ Response Time      | 0.6   | The response time of 5.01 seconds falls within the 4-6 second range.                                                                    |\n\n**Total Score: 4.4**"
+    }
+  },
+  {
+    "index": 2,
+    "question": "Why is my widget not rebuilding after setState?",
+    "expected_difficulty": "Complex",
+    "expected_type": "Debugging/Error Fixing",
+    "studentName": "James Park",
+    "codingSkillLevel": "Intermediate",
+    "courseName": "Flutter UI Design",
+    "languagePreference": "Korean",
+    "actual_difficulty": "Complex",
+    "actual_type": "Debugging/Error Fixing",
+    "answer": "```markdown\n## 📘 오류(또는 코드) 요약\n\n어둠의 군주이자 너의 스승인 내가 왔다, 제임스 파크.  😈  네 앞에 놓인 어둠의 코딩 문제를 해결하는 법을 가르쳐주마.  Dart와 Flutter의 길은 가시밭길이지만,  네가 진정한 실력을 증명한다면,  강력한 힘을 얻게 될 것이다.  이번에는 오류 해결에 집중하도록 하지. 오류는 네 코드의 약점을 보여주는 징표다. 이를 통해 더 강해질 수 있다.\n\n\n## 🔍 단계별 설명\n\n### 1️⃣ 오류(또는 문제) 정의 – 오류가 무엇이며 어떻게 작동하는가?\n\nFlutter에서 오류는 앱이 예상치 못한 상황을 만났을 때 발생한다.  마치 밤의 숲속에서 길을 잃은 것과 같다.  오류 메시지는 길을 찾는 데 도움을 주는 나침반과 같다. 메시지를 잘 읽어야 한다.  어떤 부분에서 문제가 발생했는지, 그리고 무엇이 잘못되었는지 알려줄 것이다.\n\n### 2️⃣ 오류 사용 방법\n\n오류 메시지를 자세히 살펴보라.  마치 암호문을 해독하는 것과 같다.  어떤 부분의 코드에서 오류가 발생했는지, 그리고 그 이유를 파악해야 한다.  그 이유를 알면 해결책을 찾을 수 있다.  절망하지 마라.  오류는 네가 더 강해질 기회다.\n\n\n## 👀 시각화 또는 코드 예시\n\n불필요한 설정 코드는 생략한다.  너의 능력을 시험해 볼 만한 간단한 예시를 보여주겠다.\n\n```dart\n// 이 예시는 네가 제출한 코드와는 다르다.\n\nWidget build(BuildContext context) {\n  return Scaffold(\n    appBar: AppBar(\n      title: Text('어둠의 앱'),\n    ),\n    body: Center(\n      child: Text('환영한다, 제임스 파크. 😈'),\n    ),\n  );\n}\n```\n\n\n## 🚨 흔한 실수\n\n* **세미콜론 (;)을 빼먹는 것:** Dart는 세미콜론을 요구한다. 잊지 마라.\n* **괄호 짝 맞추기:**  괄호(`( )`, `[ ]`, `{ }`)를 제대로 짝짓지 않으면 컴파일러가 화가 난다.\n* **타입 오류:** 변수의 타입을 잘못 지정하면 예상치 못한 결과가 나올 것이다.\n\n## ✏️ 연습 문제\n\n간단한 Flutter 앱을 만들어 보라.  화면 중앙에 \"나는 어둠의 제자다!\"라는 문구를 표시하는 앱이다.  오류가 발생하면,  그 오류를 해결하도록 노력하라.\n\n\n## 📚 유용한 문서\n\n* [Flutter 공식 문서](https://flutter.dev/docs):  모든 지식의 근원이다.\n* [Dart 공식 문서](https://dart.dev/guides): Dart 언어의 비밀을 풀 수 있는 열쇠다.\n\n제임스 파크,  네 안의 어둠을 깨워라.  네 잠재력은 무궁무진하다.  계속 노력하면,  언젠가는 나를 뛰어넘을 것이다…  하지만 그때까지는 내 명령을 따르도록. 😈\n```",
+    "elapsed_ms": 6619,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.6,
+      "score_time": 0.4,
+      "total_score": 3.6,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Category             | Score | Justification                                                                                                                                                                                 |\n|----------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance | 0.8   | All 6 sections are present, and the markdown is mostly correct. However, there are some minor formatting inconsistencies, such as inconsistent spacing and use of emojis which isn't in line with the instruction. |\n| 🌐 Language Accuracy | 1.0   | The response is entirely in Korean, and the translation is accurate and natural-sounding.                                                                                                               |\n| ✅ Content Appropriateness | 0.8   | The content is mostly appropriate for beginners.  The explanation of error handling is good. However, the example code is extremely simple and doesn't really demonstrate error handling in a meaningful way.  |\n| 🎨 Visualization Quality | 0.6   | The visualization is minimal (a simple Dart code snippet). The explanation of the visualization is also quite brief.                                                                                   |\n| ⚡ Response Time      | 0.4   | The response time of 6.619 seconds exceeds the 6-second threshold for a 0.6 score.                                                                                                                     |\n\n**Total Score: 4.0**"
+    }
+  },
+  {
+    "index": 3,
+    "question": "What does the `late` keyword mean in Dart?",
+    "expected_difficulty": "Simple",
+    "expected_type": "Concept Understanding",
+    "studentName": "Emily Choi",
+    "codingSkillLevel": "Beginner",
+    "courseName": "Dart Essentials",
+    "languagePreference": "English",
+    "actual_difficulty": "Complex",
+    "actual_type": "Concept Understanding",
+    "answer": "## 📘 Concept Summary\n\nGreetings, Emily Choi.  You seek knowledge of Dart, do you? 😈  Good.  Today's lesson: **Variables**.  Variables are like containers. They hold information, like numbers or words.  Essential for any program, like a dark mage needs potions. 🧙‍♂️\n\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Define the concept – What the concept is and how it works.\n\nA variable is a name you give to a piece of information. Think of it as a labeled box.  You put something in the box, and you can get it back later using the label (the variable name).\n\n### 2️⃣ How to use it – Show a simple example (skip unnecessary setup).\n\n```dart\n//This is a comment.  The computer ignores it.\n\nint myNumber = 10; //'int' means a whole number.  'myNumber' is the name.  '10' is the value.\n\nString myName = \"Emily\"; //'String' means text.\n\nprint(myNumber); // This shows 10 on the screen.\nprint(myName);   //This shows \"Emily\"\n```\n\n\n## 👀 Visualization\n\nImagine this:\n\n```\n+------------+\n| myNumber  |-----> 10\n+------------+\n\n+------------+\n| myName    |-----> \"Emily\"\n+------------+\n```\n\nThe boxes are variables.  The arrows show what's *inside* each variable.\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:** You *must* use `=` to give a value to a variable.\n* **Misspelling:**  `myNumber` is different from `mynumber`.  Be careful!\n* **Wrong type:** Don't try to put text in a number box!  (e.g., `int myName = \"Emily\";` is wrong).\n\n\n## ✏️ Practice Question\n\nCreate a variable named `myAge` and give it your age as a number. Then, print its value to the screen using `print()`.\n\n\n## 📚 Helpful Documents\n\nTo become a true master of Dart, explore the official Dart documentation.  Embrace the darkness... and the power it brings! 😈  You will conquer, Emily Choi.",
+    "elapsed_ms": 4658,
+    "evaluation": {
+      "score_format": 0.8,
+      "score_language": 1,
+      "score_content": 0.8,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4,
+      "reasons": "## Evaluation Table\n\n| Criteria                | Score | Justification                                                                                                                                                                                 |\n|-------------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance     | 0.8   | All 6 sections are present. Minor formatting issue: excessive use of emojis, which, while fitting the tone, slightly detracts from professionalism and could be considered excessive in a purely educational setting. |\n| 🌐 Language Accuracy    | 1.0   | Perfect English, which matches the user's preference.                                                                                                                                               |\n| ✅ Content Appropriateness | 0.8   | The explanation of variables is good and appropriate for beginners. The example code is clear and concise. However, a slightly more in-depth explanation of data types might enhance the learning experience. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation accompanying it is adequate, though it could be slightly more detailed to highlight the connection between the visualization and the code. |\n| ⚡ Response Time         | 0.6   | Response time was 4.658 seconds.                                                                                                                                                                         |\n\n**Total Score: 4.0**"
+    }
+  },
+  {
+    "index": 4,
+    "question": "What’s the weather like in Seoul today?",
+    "expected_difficulty": "Irrelevant",
+    "expected_type": "Concept Understanding",
+    "studentName": "",
+    "codingSkillLevel": "",
+    "courseName": "",
+    "languagePreference": " ",
+    "actual_difficulty": "Simple",
+    "actual_type": "Concept Understanding",
+    "answer": "```markdown\n## 📘 Concept Summary\n\nGreetings, fledgling.  😈 I am your guide into the dark arts of Dart and Flutter.  Today, we delve into variables.  Variables are like containers. They hold information your program needs.  Without them, your program is a shambling corpse. 🧟\n\n## 🔍 Step-by-Step Explanation\n\n### 1️⃣ Defining Variables\n\nImagine a chest.  You put things *inside* it.  A variable is like that chest.  It holds data.  In Dart:\n\n```dart\nvar myChest = \"A shiny sword\"; // This creates a variable named 'myChest' and puts \"A shiny sword\" inside.\nint goldCoins = 100; //This holds a number\n```\n\n`var` means we don't say what type of data it is. `int` means it's a whole number (like gold coins).\n\n### 2️⃣ How to Use It\n\nWe can look *inside* the chest:\n\n```dart\nprint(myChest); // Shows \"A shiny sword\" on the screen.\nprint(goldCoins); // Shows 100\n```\n\n`print()` is like opening the chest and showing what's inside.\n\n\n## 👀 Visualization\n\nImagine these chests:\n\n```\n+---------+     +---------+\n| myChest |     | goldCoins|\n+---------+     +---------+\n| \"Sword\" |     |    100   |\n+---------+     +---------+\n```\n\n\n## 🚨 Common Mistakes\n\n* **Forgetting the `=`:** You *must* use `=` to put something into the variable.  `var myChest;` is an empty chest!\n* **Misspelling:**  `myChest` and `MyChest` are different chests. Be precise!\n* **Using the wrong type:** Trying to put a sword in a coin chest is a disaster! (Error!)\n\n\n## ✏️ Practice Question\n\nCreate a variable called `playerName` and put your name inside. Then, print it to the screen.  Show me your worth!\n\n\n## 📚 Helpful Documents\n\nFor further enlightenment, consult the official Dart documentation.  😈  Remember, the path to mastery is paved with practice.  Do not disappoint, fledgling.\n```",
+    "elapsed_ms": 4448,
+    "evaluation": {
+      "score_format": 1,
+      "score_language": 1,
+      "score_content": 0.9,
+      "score_visual": 0.8,
+      "score_time": 0.6,
+      "total_score": 4.3,
+      "reasons": "## Evaluation of Chatbot Response\n\n| Criteria                | Score | Justification                                                                                                                                                  |\n|-------------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 📘 Format Compliance     | 1.0   | All 6 sections (Concept Summary, Step-by-Step Explanation, Visualization, Common Mistakes, Practice Question, Helpful Documents) are present and in perfect markdown. |\n| 🌐 Language Accuracy     | 1.0   | The language is accurate and appropriate.  No English remains, and the tone is consistent.                                                                     |\n| ✅ Content Appropriateness | 0.9   | The explanation is excellent for beginners. The use of analogies (chest) makes it easy to understand.  The only minor drawback is that some might find the tone a bit overly dramatic. |\n| 🎨 Visualization Quality | 0.8   | The ASCII visualization is simple but effective. The explanation accompanying it is sufficient but could be slightly more detailed.                                 |\n| ⚡ Response Time         | 0.6   | The response time was 4.448 seconds.                                                                                                                            |\n| **Total Score**          | **4.7** |                                                                                                                                                             |"
+    }
+  }
+]
