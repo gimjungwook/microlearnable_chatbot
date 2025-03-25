@@ -36,23 +36,22 @@ microlearnable/
 
 ## 🧪 사용 방법
 
-### 1. 의존성 설치
+### 1. 폴더 이동
+```bash
+cd genkit_classifier
+```
+
+### 2. Dependencies 설치
 
 ```bash
 npm install
 ```
 
-### 2. 실행
+### 3. 컴파일 후 실행
 
 ```bash
-npx ts-node index.ts
-```
-
-> 또는 컴파일 후 실행:
-
-```bash
-tsc
-node dist/index.js
+npx tsc
+node mass_classifier.js
 ```
 
 실행하면 CSV 경로를 입력하라는 메시지가 나타납니다.
@@ -86,13 +85,6 @@ question,expected_difficulty,expected_type,studentName,codingSkillLevel,courseNa
 - `genkit_classifier`를 Flutter + Firebase 기반의 프론트엔드와 통합
 - Firebase Functions를 통해 질문 제출 및 응답 확인 기능 구현
 - 학습자 개인화 응답 자동 생성 및 성능 분석 기능 추가
-
----
-
-## 🧑‍💻 기여 및 피드백
-
-이 프로젝트는 실험적인 교육 AI 도구로, 누구나 개선을 제안하거나 함께 기여할 수 있습니다.  
-버그, 피드백, 기여는 GitHub Issue나 PR을 통해 자유롭게 남겨주세요!
 
 ---
 
