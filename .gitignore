@@ -1,3 +1,3 @@
-node_modules/
-dist/
-.genkit/
+genkit_classifier/node_modules
+genkit_classifier/dist
+genkit_classifier/.genkit
