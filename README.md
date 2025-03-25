@@ -54,7 +54,8 @@ npx tsc
 node mass_classifier.js
 ```
 
-실행하면 CSV 경로를 입력하라는 메시지가 나타납니다.
+실행하면 인풋 CSV 경로를 입력하라는 메시지가 나타납니다.
+> 기본적인 실험용 파일은 question.csv입니다.
 
 ---
 
