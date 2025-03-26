@@ -10,7 +10,7 @@ Flutter/Dart 관련 질문을 자동 분류하고, Gemini 모델을 활용해 �
 
 ```
 microlearnable/
-└── genkit_classifier/      # 현재 프로젝트 (질문 분류기)
+└── genkit_massflow/      # 현재 프로젝트 (질문 분류기)
     ├── results/            # 결과 저장 폴더
     ├── questions.csv         # 테스트용 입력 CSV
     └── massflow.ts            # 메인 실행 파일 (TypeScript)
@@ -39,7 +39,7 @@ microlearnable/
 
 ### 1. 폴더 이동
 ```bash
-cd genkit_classifier
+cd genkit_massflow
 ```
 
 ### 2. Dependencies 설치
