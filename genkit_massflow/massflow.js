@@ -12,35 +12,41 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// 📚 필요한 모듈들 import
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const readline_1 = __importDefault(require("readline"));
 const sync_1 = require("csv-parse/sync");
 const googleai_1 = require("@genkit-ai/googleai");
 const genkit_1 = require("genkit");
+// 📄 CSV 파일에서 질문을 읽어오는 함수
 function readQuestionsFromCSV(filePath) {
-    const file = fs_1.default.readFileSync(filePath, 'utf8');
+    const file = fs_1.default.readFileSync(filePath, 'utf8'); // 📖 파일 읽기
     const records = (0, sync_1.parse)(file, {
         columns: true,
         skip_empty_lines: true,
-    });
+    }); // 📋 CSV 파싱
     return records;
 }
+// ⏳ 지연 함수: ms 단위로 대기
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-function classify(input, prompt) {
+// 🤖 AI 분류 함수: modelOverride가 있으면 해당 모델로, 없으면 gemini15Flash로 호출
+function classify(input, prompt, modelOverride) {
     return __awaiter(this, void 0, void 0, function* () {
+        const chosenModel = modelOverride ? modelOverride : googleai_1.gemini15Flash; // ✨ modelOverride 선택 가능
         const ai = (0, genkit_1.genkit)({
-            plugins: [(0, googleai_1.googleAI)()],
-            model: googleai_1.gemini15Flash,
+            plugins: [(0, googleai_1.googleAI)()], // 🔌 구글 AI 플러그인 사용
+            model: chosenModel,
         });
         while (true) {
             try {
                 const response = yield ai.generate({ prompt });
-                return response.text.trim();
+                return response.text.trim(); // ✅ 성공 시 응답 반환
             }
             catch (error) {
+                // ⚠️ 오류 발생 시 랜덤 대기 후 재시도
                 const wait = Math.floor(Math.random() * 5000) + 3000;
                 console.warn(`⚠️ Retrying in ${wait}ms due to error: ${error.status || error.message}`);
                 yield delay(wait);
@@ -48,6 +54,7 @@ function classify(input, prompt) {
         }
     });
 }
+// 🔧 시스템 프롬프트 생성 함수: 질문 유형에 따라 다른 프롬프트 반환
 function getSystemPrompt(type, context) {
     const { studentName = 'John Doe', codingSkillLevel = 'Beginner', courseName = 'Flutter Development', languagePreference = 'English', } = context;
     const userCode = "N/A";
@@ -68,7 +75,7 @@ function getSystemPrompt(type, context) {
         "use_emoji": true
       },
       "task": {
-        "language_handling": "If user has language preference, translate the whole response to that language.",
+        "language_handling": "Response MUST BE in user's language preperence.",
         "assumption": "Assume an absolute beginner with limited English.",
         "instructions": "Use simple words and break down concepts.",
         "sentence_structure": "Keep sentences short and clear."
@@ -119,7 +126,7 @@ function getSystemPrompt(type, context) {
     "use_emoji": true
   },
   "task": {
-    "language_handling": "If user has language preference, translate the whole response to that language.",
+    "language_handling": "Response MUST BE in user's language preperence.",
     "assumption": "Assume an absolute beginner with limited English.",
     "explanation": "Use simple words and break down concepts.",
     "sentence_structure": "Keep sentences short and clear."
@@ -164,6 +171,7 @@ function getSystemPrompt(type, context) {
 }`;
     }
 }
+// 📝 평가 프롬프트 생성: 응답에 대해 평가할 수 있도록 프롬프트 작성
 function getEvaluationPrompt(answer, elapsed, language) {
     return `{
     "role": "evaluator",
@@ -175,38 +183,45 @@ function getEvaluationPrompt(answer, elapsed, language) {
     }
   }`;
 }
+// 🔍 평가 결과 문자열을 파싱하여 객체로 반환
 function parseEvaluation(raw) {
-    var _a;
     const match = (label) => {
         var _a;
         const regex = new RegExp(`${label}.*?\\|\\s*(\\d\\.\\d)`);
         return parseFloat(((_a = raw.match(regex)) === null || _a === void 0 ? void 0 : _a[1]) || '0');
     };
-    const total = parseFloat(((_a = raw.match(/Total Score[:：]\s*(\d\.\d)/)) === null || _a === void 0 ? void 0 : _a[1]) || '0');
     return {
         score_format: match("Format Compliance"),
         score_language: match("Language Accuracy"),
         score_content: match("Content Appropriateness"),
         score_visual: match("Visualization"),
         score_time: match("Response Time"),
-        total_score: match("Format Compliance") + match("Language Accuracy") + match("Content Appropriateness") + match("Visualization") + match("Response Time"),
+        total_score: match("Format Compliance") +
+            match("Language Accuracy") +
+            match("Content Appropriateness") +
+            match("Visualization") +
+            match("Response Time"),
         reasons: raw,
     };
 }
-function processQuestions(csvPath) {
+// 🚀 CSV 파일 내 모든 질문을 처리하는 메인 함수 (선택한 답변 모델을 인자로 받음)
+function processQuestions(csvPath, answerModel, answerModelName) {
     return __awaiter(this, void 0, void 0, function* () {
-        const inputs = readQuestionsFromCSV(csvPath);
+        const inputs = readQuestionsFromCSV(csvPath); // 📂 CSV 파일 읽기
         const results = [];
         const dateStr = new Date().toISOString().slice(0, 10);
         const timeStr = new Date().toISOString().replace(/[:T]/g, '-').split('.')[0];
+        // 💾 결과 파일명에 선택한 답변 모델명을 포함
         const resultDir = path_1.default.join('results', dateStr);
         if (!fs_1.default.existsSync(resultDir))
             fs_1.default.mkdirSync(resultDir, { recursive: true });
-        const resultPath = path_1.default.join(resultDir, `result_${timeStr}.json`);
+        const resultPath = path_1.default.join(resultDir, `result_${timeStr}_${answerModelName}.json`);
         const partialPath = path_1.default.join(resultDir, 'partial_results.json');
         for (let i = 0; i < inputs.length; i++) {
             const input = inputs[i];
-            const start = performance.now();
+            const totalStart = performance.now(); // ⏱ 전체 시작 시간
+            // 🔎 난이도 분류 측정
+            const diffStart = performance.now();
             const difficultyPrompt = `{
   "persona": "You are a classifier that categorizes a user's question."
   "task": "categorizes a user's question into one of the following three categories based on content and context:
@@ -217,57 +232,68 @@ function processQuestions(csvPath) {
 
 Pay special attention to questions that may not include the words 'Flutter' or 'Dart' directly, but are clearly asked in the context of writing or debugging code.
 
-Examples of contextually related but implicit questions:
-- 'What should I do if this function returns null?'
-- 'How can I check if someone is an adult in this code?'
-
 Your output must be one of: 'Simple', 'Complex', or 'Irrelevant'. Do not explain your reasoning. Do not include any extra text.",
   "input_format": "${input.question}",
   "output_format": "'Simple', 'Complex', or 'Irrelevant'"
 }`;
-            const typePrompt = `Classify the question into one of the following categories: \"Concept Understanding\" or \"Debugging/Error Fixing\".\nQuestion: \"${input.question}\"`;
             const actual_difficulty = yield classify(input.question, difficultyPrompt);
+            const difficultyTime = Math.round(performance.now() - diffStart);
+            // 🏷 유형 분류 측정
+            const typeStart = performance.now();
+            const typePrompt = `Classify the question into one of the following categories: "Concept Understanding" or "Debugging/Error Fixing".\nQuestion: "${input.question}"`;
             const actual_type = yield classify(input.question, typePrompt);
-            // If actual difficulty is 'Irrelevant', return a custom message instead
+            const typeTime = Math.round(performance.now() - typeStart);
+            // 🚫 'Irrelevant'인 경우, 별도 메시지 생성 후 다음 질문으로 건너뜀
             if (actual_difficulty === 'Irrelevant') {
+                const totalElapsed = Math.round(performance.now() - totalStart);
                 const result = Object.assign(Object.assign({ index: i + 1 }, input), { actual_difficulty,
-                    actual_type, answer: "This system is not designed to answer non-Dart/Flutter related questions. Please ask something related to Dart or Flutter.", elapsed_ms: Math.round(performance.now() - start), evaluation: {
+                    actual_type, answer: "This system is not designed to answer non-Dart/Flutter related questions. Please ask something related to Dart or Flutter.", elapsed_ms: totalElapsed, evaluation: {
                         score_format: 0,
                         score_language: 0,
                         score_content: 0,
                         score_visual: 0,
                         score_time: 0,
-                        total_score: 0,
+                        total_score: 5,
                         reasons: "No evaluation for irrelevant question."
-                    } });
+                    }, difficultyTime_ms: difficultyTime, typeTime_ms: typeTime, answerTime_ms: 0, evaluationTime_ms: 0, answerModelUsed: answerModelName });
                 results.push(result);
                 fs_1.default.writeFileSync(partialPath, JSON.stringify(results, null, 2));
                 console.log(`${result.index}. ✅ Difficulty: ${actual_difficulty}, Type: ${actual_type}`);
-                continue; // Skip to the next question if the difficulty is 'Irrelevant'
+                continue;
             }
+            // 🛠 시스템 프롬프트 생성 후, 선택한 모델로 답변 생성 및 시간 측정
             const systemPrompt = getSystemPrompt(actual_type, input);
-            const answer = yield classify(input.question, systemPrompt);
-            const end = performance.now();
-            const elapsed = Math.round(end - start);
-            const evalPrompt = getEvaluationPrompt(answer, elapsed / 1000, input.languagePreference || 'English');
+            const answerStart = performance.now();
+            const answer = yield classify(input.question, systemPrompt, answerModel);
+            const answerTime = Math.round(performance.now() - answerStart);
+            // 📝 평가 프롬프트 및 평가 측정
+            const evalStart = performance.now();
+            const overallElapsed = Math.round(performance.now() - totalStart);
+            const evalPrompt = getEvaluationPrompt(answer, overallElapsed / 1000, input.languagePreference || 'English');
             const rawEvaluation = yield classify('', evalPrompt);
+            const evaluationTime = Math.round(performance.now() - evalStart);
             const evaluation = parseEvaluation(rawEvaluation);
             const result = Object.assign(Object.assign({ index: i + 1 }, input), { actual_difficulty,
                 actual_type,
-                answer, elapsed_ms: elapsed, evaluation });
+                answer, elapsed_ms: overallElapsed, evaluation, difficultyTime_ms: difficultyTime, typeTime_ms: typeTime, answerTime_ms: answerTime, evaluationTime_ms: evaluationTime, answerModelUsed: answerModelName });
             results.push(result);
             fs_1.default.writeFileSync(partialPath, JSON.stringify(results, null, 2));
             console.log(`${result.index}. ✅ Difficulty: ${actual_difficulty}, Type: ${actual_type}`);
         }
+        // 📤 최종 결과 파일 저장 (파일명에 선택한 모델명 포함)
         fs_1.default.writeFileSync(resultPath, JSON.stringify(results, null, 2), 'utf8');
         console.log(`\n🎉 All done! Final result saved to: ${resultPath}`);
     });
 }
-(() => __awaiter(void 0, void 0, void 0, function* () {
-    const rl = readline_1.default.createInterface({ input: process.stdin, output: process.stdout });
+// 🚀 프로그램 시작: 먼저 답변 생성 모델 선택 후, CSV 파일 경로를 입력받음
+const rl = readline_1.default.createInterface({ input: process.stdin, output: process.stdout });
+rl.question('🛠 Choose answer generation model (1: gemini20Flash, 2: gemini15Flash8b): ', (modelChoice) => {
+    // 기본값은 gemini20Flash (1번)
+    const chosenModel = (modelChoice.trim() === '2') ? googleai_1.gemini15Flash8b : googleai_1.gemini20Flash;
+    const chosenModelName = (modelChoice.trim() === '2') ? 'gemini15Flash8b' : 'gemini20Flash';
     rl.question('📂 CSV file path: ', (inputPath) => __awaiter(void 0, void 0, void 0, function* () {
         rl.close();
-        yield processQuestions(inputPath.trim());
+        yield processQuestions(inputPath.trim(), chosenModel, chosenModelName);
         process.exit(0);
     }));
-}))();
+});
