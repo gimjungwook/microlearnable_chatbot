@@ -51,7 +51,7 @@ npm install
 
 ```bash
 npx tsc
-node mass_classifier.js
+node massflow.js
 ```
 
 실행하면 인풋 CSV 경로를 입력하라는 메시지가 나타납니다.
