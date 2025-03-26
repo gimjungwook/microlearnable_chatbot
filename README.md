@@ -1,5 +1,5 @@
 
-# 📦 genkit_classifier
+# 📦 massflow
 
 **Genkit 기반 질문 분류 및 AI 응답 시스템**  
 Flutter/Dart 관련 질문을 자동 분류하고, Gemini 모델을 활용해 교육 응답을 생성 및 평가하는 프로젝트입니다.
