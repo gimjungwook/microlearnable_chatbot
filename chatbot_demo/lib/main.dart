@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
 }
 
 class FunctionTester extends StatefulWidget {
+  const FunctionTester({super.key});
+
   @override
   _FunctionTesterState createState() => _FunctionTesterState();
 }
