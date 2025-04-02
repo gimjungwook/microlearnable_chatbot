@@ -10,10 +10,10 @@ Flutter/Dart 관련 질문을 자동 분류하고, Gemini 모델을 활용해 �
 
 ```
 microlearnable/
-└── genkit_classifier/      # 현재 프로젝트 (질문 분류기)
+└── genkit_massflow/      # 현재 프로젝트 (질문 분류기)
     ├── results/            # 결과 저장 폴더
-    ├── example.csv         # 테스트용 입력 CSV
-    └── mass_classifier.ts            # 메인 실행 파일 (TypeScript)
+    ├── questions.csv         # 테스트용 입력 CSV
+    └── massflow.ts            # 메인 실행 파일 (TypeScript)
 ```
 
 > 이후 이 프로젝트는 `Flutter + Firebase Functions` 기반의 웹 프로젝트와 통합될 예정입니다.  
@@ -25,6 +25,7 @@ microlearnable/
 
 | 기능 | 설명 |
 |------|------|
+| 📄 원하는 모델 선택 | gemini20Flash와 gemini15Flash8b 중 원하는 모델을 선택 |
 | 📄 CSV 파일 입력 | 사용자 질문 및 정보(난이도 예상, 이름, 언어 등) 포함 |
 | 🤖 Gemini 모델 사용 | 질문을 난이도(Simple/Complex/Irrelevant)와 유형(Concept/Debugging)으로 자동 분류 |
 | 🧙 시스템 프롬프트 | 유형에 맞는 맞춤형 교육 응답 생성 |
@@ -38,7 +39,7 @@ microlearnable/
 
 ### 1. 폴더 이동
 ```bash
-cd genkit_classifier
+cd genkit_massflow
 ```
 
 ### 2. Dependencies 설치
@@ -51,7 +52,7 @@ npm install
 
 ```bash
 npx tsc
-node mass_classifier.js
+node massflow.js
 ```
 
 실행하면 인풋 CSV 경로를 입력하라는 메시지가 나타납니다.
